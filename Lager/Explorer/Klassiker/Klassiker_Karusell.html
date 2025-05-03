@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Klassiker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            text-align: center;
+        }
+
+        .carousel-container {
+            position: relative;
+            width: 90%;
+            margin: auto;
+            overflow: hidden;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            background: white;
+            padding: 20px 0;
+        }
+
+        .carousel-wrapper {
+            display: flex;
+            overflow-x: scroll;
+            scroll-behavior: smooth;
+            gap: 20px;
+            padding: 10px;
+            white-space: nowrap;
+        }
+
+        .carousel-wrapper::-webkit-scrollbar {
+            display: none;
+        }
+
+        .book {
+            flex: 0 0 auto;
+            width: 200px;
+            background: #fff;
+            border-radius: 8px;
+            padding: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .book img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .book h5 {
+            font-size: 14px;
+            word-wrap: break-word;
+            text-align: center;
+            line-height: 1.2;
+            margin: 5px 0;
+        }
+
+        .book a {
+            text-decoration: none;
+            background: #333;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            display: inline-block;
+            font-size: 12px;
+        }
+
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.1);
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 50%;
+            transition: 0.3s;
+        }
+
+        .arrow:hover {
+            background: rgba(0, 0, 0, 0.3);
+            color: white;
+        }
+
+        .left-arrow { left: 25px; }
+        .right-arrow { right: 25px; }
+
+        @media (max-width: 768px) {
+            .left-arrow, .right-arrow { display: none; }
+        }
+
+    </style>
+</head>
+<body>
+    <button class="arrow left-arrow" onclick="scrollCarousel(-1)">&#10094;</button>
+    <div class="carousel-container">        
+        <div class="carousel-wrapper" id="carousel">
+            <div class="book">
+                <img src="" alt="">
+                <h5>tba</h5>
+                <a href="" target="_blank">Details</a>
+            </div>
+        </div>
+    </div>
+    <button class="arrow right-arrow" onclick="scrollCarousel(1)">&#10095;</button>
+
+    <script>
+        const carousel = document.getElementById("carousel");
+
+        function scrollCarousel(direction) {
+            const scrollAmount = carousel.clientWidth * 0.8;
+            carousel.scrollBy({
+                left: direction * scrollAmount,
+                behavior: "smooth"
+            });
+        }
+    </script>
+
+</body>
+</html>
