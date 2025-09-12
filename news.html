@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eLibrary v.1.1</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="icon" href="Lager/Favicon/favicon.jpg" type="image/jpg">
+    <link rel="apple-touch-icon" href="Lager/Favicon/apple-icon.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <h3>eLibrary</h3>
+        <nav>
+            <ul>
+                <li><a href="index.html">Startseite</a></li>
+                <li><a href="explorer.html">Explorer</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="https://sites.google.com/view/r-ravinthrarasa/landing-page" target="_blank">Kontakt</a></li>
+                <li><a href="suche.html" title="Suchen"><i class="fas fa-search"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+</body>
+
+<body>
+    <div class="news-grid">
+        <div class="news-item" onclick="openNews(this)">
+            <h1>Publikationen für die Maturaprüfungen 2026</h1>
+            <span class="news-date">11.04.2026</span>
+            <p class="news-description">Die Maturaprüfungen stehen an! Dementsprechend werden viele Werke bezüglich der Prüfung veröffentlicht: "Wissenschaften fürs Gymnasium"-Reihe, "Französische bzw. Lateinische bzw. Spanische Morphologie, Syntax und Literatur" und diverse Zusammenfassungen. Zusätzlich gibt es zur Abwechslung einige neue Werke in der Unterhaltungsliteratur. Viel Glück!</p>
+            <img src="Lager/Werke/WfG/cover_1.jpg" alt="News Image" class="news-image">
+        </div>
+
+        <div class="news-item" onclick="openNews(this)">
+            <h1>Veröffentlichung der Maturaarbeit</h1>
+            <span class="news-date">31.10.2025</span>
+            <p class="news-description">Die kreative Produktion, welche im Rahmen der Maturaarbeit 2025 produziert wird, wird offiziell in der eLibrary veröffentlicht. Das Werk besteht aus einem Grammatik- und einem Vokabelteil, deren eBooks hier erhältlich sind.</p>
+            <img src="Lager/Werke/HexaLengua/cover.jpeg" alt="News Image" class="news-image">
+        </div>
+
+        <div class="news-item" onclick="openNews(this)">
+            <h1>eLibrary v.1.1 und weitere Veröffentlichungen</h1>
+            <span class="news-date">09.08.2025</span>
+            <p class="news-description">Die neue Version von eLibrary kommt am 9. August 2025! Neue Funktionen, wie der Explorer oder die Suchfunktion, sind verfügbar. Ebenfalls werden zahlreiche Werke veröffentlicht, wie z.B. BKS Assistant v.3.0, Il fundament rumantsch sursilvan, SprachRefresher und Literaturjournal 2024 / 2025. Weitere Projekte werden präsentiert, wie z.B. die WfG-Reihe. Viel Spass!</p>
+            <img src="Lager/Werke/LinguistikLiteratur/cover_4.jpg" alt="News Image" class="news-image">
+        </div>
+    </div>
+
+    <div class="news-grid">
+        <div class="news-item" onclick="openNews(this)">
+            <h1>Eröffnung der eLibrary</h1>
+            <span class="news-date">03.05.2025</span>
+            <a id="overlay-link" href="index.html" class="news-button">Entdecken</a>
+            <p class="news-description">Die eLibrary öffnet offiziell seine digitalen Tore. In dieser Biblitohek gibt es nun die Startseite, wo alle Werke, wie die Maturaarbeit, präsentiert werden und diese News-Seite, die alle wichtigen Themen zu dieser Bibliothek auffassen. Weitere Funktionen in der eLibrary und Veröffentlichung von neuen Werken folgen.</p>
+            <img src="Lager/Favicon/favicon.jpg" alt="News Image" class="news-image">
+        </div>
+    </div>
+
+    <div id="news-overlay" class="news-overlay" onclick="closeNews()">
+        <div class="news-popup" onclick="event.stopPropagation();">
+            <span class="close-btn" onclick="closeNews()">&times;</span>
+            <h1 id="overlay-title"></h1>
+            <span id="overlay-date"></span>
+            <p id="overlay-description"></p>
+            <img id="overlay-img" src="" alt="News Image">
+        </div>
+    </div>
+</body>
+
+<style>
+    .news-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+        padding: 20px;
+        width: 97vw;
+        margin: 0;
+    }
+
+    .news-item {
+        background: #fff;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: transform 0.2s ease-in-out;
+        min-height: 100%;
+        height: 100%;
+        box-sizing: border-box;
+        transition: transform 0.2s ease-in-out;
+    }
+
+    .news-item:hover {
+        transform: scale(1.03);
+        z-index: 1;
+    }
+
+    @media screen and (max-width: 900px) {
+        .news-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        .news-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .news-item h3 {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+
+    .news-date {
+        font-size: 12px;
+        color: #666;
+    }
+
+    .news-description {
+        font-size: 14px;
+        color: #444;
+        margin-bottom: 10px;
+        text-align: justify;
+    }
+
+    .news-image {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 5px;
+    }
+
+    .news-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.7);
+        justify-content: center;
+        align-items: flex-start;
+        overflow: auto;
+        padding-top: 150px;
+        z-index: 9999;
+    }
+
+    .news-popup {
+        background: rgba(255, 255, 255, 0.9);
+        padding: 20px;
+        border-radius: 8px;
+        width: 80%;
+        max-height: 70vh;
+        max-width: 600px;
+        text-align: center;
+        position: relative;
+        overflow-y: auto;
+    }
+
+    .news-popup img {
+        width: 100%;
+        border-radius: 5px;
+    }
+
+    .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .news-button {
+        display: inline-block;
+        margin-top: 15px;
+        padding: 10px 20px;
+        background: #007bff;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+
+    .news-button:hover {
+        background: #0056b3;
+    }
+
+    .disabled-button {
+        display: inline-block;
+        padding: 10px 15px;
+        margin: 5px;
+        background-color: #007bff;
+        color: white;
+        text-decoration: none;
+        display: inline-block;
+        border-radius: 5px;
+
+        cursor: not-allowed;
+        opacity: 0.5;
+        pointer-events: none;
+    }
+</style>
+
+<script>
+    function openNews(element) {
+        document.getElementById("overlay-img").src = element.querySelector(".news-image").src;
+        document.getElementById("overlay-title").innerText = element.querySelector("h1").innerText;
+        document.getElementById("overlay-date").innerText = element.querySelector(".news-date").innerText;
+        document.getElementById("overlay-description").innerText = element.querySelector(".news-description").innerText;
+
+        document.getElementById("news-overlay").style.display = "flex";
+    }
+
+    function closeNews() {
+        document.getElementById("news-overlay").style.display = "none";
+    }
+</script>
+
+<footer>
+    <h4>&copy; 2025 <a href="https://sites.google.com/view/r-ravinthrarasa/projekte/education-utilities" target="_blank" class="styled-link">Education Utilities</a>, alle <a href="https://sites.google.com/view/r-ravinthrarasa/impressum" target="_blank" class="styled-link">Rechte</a> vorbehalten.</h4>
+</footer>
+
+<script src="script.js"></script>
+
+</html>
