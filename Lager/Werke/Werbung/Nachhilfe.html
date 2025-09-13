@@ -216,23 +216,23 @@
                 <p>Ich biete ein breites Angebot an: von Einzel- und Gruppenunterricht über Prüfungsvorbereitungen (z.B. Maturaprüfungen) bis hin zu wöchentlichen Spezialkursen. Zusätzlich können optionale Zusatzmodule gebucht werden.</p>
             </div>
         </div>
-        <br><br><br>
+        <br><br>
         <div class="buttons">
             <a href="https://sites.google.com/view/r-ravinthrarasa/nachhilfe" target="_blank">Zur Website</a>
             <a href="https://sites.google.com/view/r-ravinthrarasa/nachhilfe#h.74qea99akm4z" target="_blank">Zu den Preisen</a>
         </div>
+        <br><br>
     </div>
 </div>
 </body>
 
 <script>
-function switchContainer(containerId) {
-    document.querySelectorAll('.content-container').forEach(container => container.classList.remove('active'));
-    document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
-
-    document.getElementById(containerId).classList.add('active');
-    document.querySelector(`[onclick="switchContainer('${containerId}')"]`).classList.add('active');
-}
+    function switchContainer(containerId) {
+        document.querySelectorAll('.content-container').forEach(container => container.classList.remove('active'));
+        document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+        document.getElementById(containerId).classList.add('active');
+        document.querySelector(`[onclick="switchContainer('${containerId}')"]`).classList.add('active');
+    }
 </script>
 
 </html>
