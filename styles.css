@@ -17,24 +17,6 @@ header {
     z-index: 1000;
 }
 
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        position: relative;
-        text-align: center;
-    }
-
-    nav ul {
-        flex-direction: column;
-        width: 100%;
-        padding: 0;
-    }
-
-    nav ul li {
-        margin: 5px 0;
-    }
-}
-
 footer {
     background-color: #A3AFA3;
     color: white;
@@ -211,18 +193,6 @@ a:hover {
     width: 100%;
 }
 
-@media (max-width: 768px) {
-    .card-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 480px) {
-    .card-container {
-        grid-template-columns: 1fr;
-    }
-}
-
 .card {
     background-color: #f2f2f2;
     border-radius: 8px;
@@ -241,7 +211,7 @@ a:hover {
 
 .book-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
 }
 
@@ -333,4 +303,32 @@ a:hover {
     right: 15px;
     font-size: 30px;
     cursor: pointer;
+}
+
+@media (max-width: 800px) {
+    header {
+        flex-direction: column;
+        position: relative;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    .carousel-container {
+        display: none !important;
+    }
+
+    .book-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+    }
 }
