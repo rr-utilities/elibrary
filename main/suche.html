@@ -100,8 +100,7 @@
 </main>
 
 <footer>
-    <h4>&copy; 2025
-        <a href="https://sites.google.com/view/r-ravinthrarasa/projekte/education-utilities" target="_blank"
+    <h4>&copy; 2025 - 2026 <a href="https://sites.google.com/view/r-ravinthrarasa/projekte/education-utilities" target="_blank"
         class="styled-link">Education Utilities</a>, alle
         <a href="https://sites.google.com/view/r-ravinthrarasa/impressum" target="_blank" class="styled-link">Rechte</a>
         vorbehalten.
@@ -114,13 +113,6 @@
     const werke = [
         { titel: "Mathenachhilfe, Französischnachhilfe uvm.", ort: "Startseite > Werbung", beschreibung: "Ich biete individuelle Nachhilfe in Mathematik und Französisch für Schülerinnen und Schüler verschiedner Schulstufe - fokussiert, effizient und verständlich." },
 
-        { titel: "BKS Assistant", ort: "Startseite > Multimedia", beschreibung: "Portal zur Unterstützung des Schulalltags an der Bündner Kantonsschule Chur (BKS Chur)" },
-        { titel: "bks_chur", ort: "Startseite > Multimedia", beschreibung: "Ein Quizlet-Account mit den wichtigsten Vokabeln aus (fast) allen Sprachen, die an der Bündner Kantonsschule Chur unterrichtet werden." },
-        { titel: "kopfrechner", ort: "Startseite > Multimedia", beschreibung: "Eine simple und schnelle Art, um Kopfrechnen sogar im Alltag zu üben." },
-        { titel: "kopfentspanner", ort: "Startseite > Multimedia", beschreibung: "Ein simpler Timer, um den Kopf beim Lernen zu entlasen." },
-        { titel: "HexaLengua: webBook / webCards", ort: "Startseite > Multimedia", beschreibung: "Die Online-Versionen von HexaLengua Grammatik und Vokabeln." },
-        { titel: "WhiteBoard", ort: "Startseite > Multimedia", beschreibung: "Eine WhiteBoard-Webapp zum schnelle Notizen machen, Zeichnungen erstellen und vieles mehr." },
-
         { titel: "Übersicht der Mathematiktheorie", ort: "Startseite > Wissenschaften fürs Gymnasium", beschreibung: "Übersicht der Mathematikthorie auf gymnasialem Niveau." },
         { titel: "Übersicht der Physiktheorie", ort: "Startseite > Wissenschaften fürs Gymnasium", beschreibung: "Übersicht der Physikthorie auf gymnasialem Niveau." },
         { titel: "Übersicht der Chemiektheorie", ort: "Startseite > Wissenschaften fürs Gymnasium", beschreibung: "Übersicht der Chemiethorie auf gymnasialem Niveau." },
@@ -128,12 +120,32 @@
         { titel: "Übersicht der Astronomietheorie", ort: "Startseite > Wissenschaften fürs Gymnasium", beschreibung: "Übersicht der Astronomiethorie auf gymnasialem Niveau." },
         { titel: "Grundlagen der Psychologie", ort: "Startseite > Wissenschaften fürs Gymnasium", beschreibung: "Grundlagen der Psychologie auf gymnasialem Niveau." },
 
-        { titel: "Literaturjournal 2024", ort: "Startseite > Literatur", beschreibung: "Literaturanalyse / -archiv einiger Schullektüren aus 2024." },
-        { titel: "Literaturjournal 2025", ort: "Startseite > Literatur", beschreibung: "Literaturanalyse / -archiv einiger Schullektüren aus 2025." },
-        { titel: "Il fundament rumantsch sursilvan", ort: "Startseite > Literatur", beschreibung: "Ein Nachschlagewerk für grundlegende Sprachkenntnisse im Romanischen (sursilvan)." },
-        { titel: "SprachRefresher: Französisch, Spanisch, Italienisch", ort: "Startseite > Literatur", beschreibung: "Ein Nachschlagewerk zum Erfrischen der Sprachkenntnisse in diesen Sprachen." },
-        { titel: "HexaLengua: Gramamtik", ort: "Startseite > Literatur", beschreibung: "Ein interlinguales Nachschlagewerk (mit Latein, Französisch, Italienisch, Romanisch, Englisch, Deutsch)" },
-        { titel: "HexaLengua: Vokabeln", ort: "Startseite > Literatur", beschreibung: "Ein interlinguales Wörterbuch (mit Latein, Französisch, Italienisch, Romanisch, Englisch, Deutsch)" },
+        { titel: "BKS Assistant", ort: "Startseite > Multimedia", beschreibung: "Portal zur Unterstützung des Schulalltags an der Bündner Kantonsschule Chur (BKS Chur)" },
+        { titel: "bks_chur", ort: "Startseite > Multimedia", beschreibung: "Ein Quizlet-Account mit den wichtigsten Vokabeln aus (fast) allen Sprachen, die an der Bündner Kantonsschule Chur unterrichtet werden." },
+        { titel: "kopfrechner", ort: "Startseite > Multimedia", beschreibung: "Eine simple und schnelle Art, um Kopfrechnen sogar im Alltag zu üben." },
+        { titel: "kopfentspanner", ort: "Startseite > Multimedia", beschreibung: "Ein simpler Timer, um den Kopf beim Lernen zu entlasen." },
+        { titel: "HexaLengua: webBook / webCards", ort: "Startseite > Multimedia", beschreibung: "Die Online-Versionen von HexaLengua Grammatik und Vokabeln." },
+        { titel: "Tutor Assistant", ort: "Startseite > Multimedia", beschreibung: "Portal zur Unterstützung in der Tätigkeit als Nachhilfelehrer*in." },
+
+        { titel: "Grundoperationen in N, Z, Q und R", ort: "Startseite > Exakte Wissenschaften", beschreibung: "Skript mit Theorie und Übungen zu den Grundoperationen in N, Z, Q und R." },
+        { titel: "Logarithmen", ort: "Startseite > Exakte Wissenschaften", beschreibung: "Skript mit Theorie und Übungen zu Logarithmen." },
+        { titel: "Folgen und Reihen - Grundlagen", ort: "Startseite > Exakte Wissenschaften", beschreibung: "Skript mit Theorie und Übungen zu Folgen & Reihen." },
+        { titel: "Trigonometrie", ort: "Startseite > Exakte Wissenschaften", beschreibung: "Skript mit Theorie und Übungen zu der Trigonometrie." },
+        { titel: "Infinitesimalrechnung", ort: "Startseite > Exakte Wissenschaften", beschreibung: "Skript mit Theorie und Übungen zu der Differential- und Integralrechnung." },
+        { titel: "Vektorgeometrie - Grundlagen", ort: "Startseite > Exakte Wissenschaften", beschreibung: "Skript mit Theorie und Übungen zu der Vektorrechnung und der analytischen Geometrie." },
+        { titel: "Stochastik - Einführung", ort: "Startseite > Exakte Wissenschaften", beschreibung: "Skript mit Theorie und Beispielen zu der Kombinatorik und der Warhscheinlichkeitsrechnung." },
+        { titel: "Parameteranalyse", ort: "Startseite > Exakte Wissenschaften", beschreibung: "Analyse von Parameterwirkung in Funktionsgleichung / Unabhängige Arbeit." },
+
+        { titel: "Literaturjournal 2024", ort: "Startseite > Linguistik und Literatur", beschreibung: "Literaturanalyse / -archiv einiger Schullektüren aus 2024." },
+        { titel: "Literaturjournal 2025", ort: "Startseite > Linguistik und Literatur", beschreibung: "Literaturanalyse / -archiv einiger Schullektüren aus 2025." },
+        { titel: "Il fundament rumantsch sursilvan", ort: "Startseite > Linguistik und Literatur", beschreibung: "Ein Nachschlagewerk für grundlegende Sprachkenntnisse im Romanischen (sursilvan)." },
+        { titel: "SprachRefresher: Französisch, Spanisch, Italienisch", ort: "Startseite > Linguistik und Literatur", beschreibung: "Ein Nachschlagewerk zum Erfrischen der Sprachkenntnisse in diesen Sprachen." },
+        { titel: "HexaLengua: Gramamtik", ort: "Startseite > Linguistik und Literatur", beschreibung: "Ein interlinguales Nachschlagewerk (mit Latein, Französisch, Italienisch, Romanisch, Englisch, Deutsch)" },
+        { titel: "HexaLengua: Vokabeln", ort: "Startseite > Linguistik und Literatur", beschreibung: "Ein interlinguales Wörterbuch (mit Latein, Französisch, Italienisch, Romanisch, Englisch, Deutsch)" },
+        { titel: "Lateinische Morphologie, Syntax und Literatur", ort: "Startseite > Linguistik und Literatur", beschreibung: "Von grundlegender Lateingrammatik bis zu Literaturanalyse für die Maturaprüfung." },
+        { titel: "Spanische Morphologie, Syntax und Literatur", ort: "Startseite > Linguistik und Literatur", beschreibung: "Von grundlegender Spanischgrammatik bis zu Literaturanalyse für die Maturaprüfung." },
+        { titel: "Französische Morphologie, Syntax und Literatur", ort: "Startseite > Linguistik und Literatur", beschreibung: "Von grundlegender Französischgrammatik bis zu Literaturanalyse für die Maturaprüfung." },
+        { titel: "Konzept der deutschen Literatur- und Textanalyse", ort: "Startseite > Linguistik und Literatur", beschreibung: "Literaturanalyse / -archiv und Textanalyse für die Maturprüfung." },
 
         { titel: "Algebra 7/8", ort: "Explorer > Lehrmittel", beschreibung: "Lehrmittel für den Übergang zwischen Primarstufe und Sekundar- / Gymnasialstufe (Variablen, Brüche, natürliche Zahlen, negative Zahlen etc.)." },
         { titel: "Algebra 9/10", ort: "Explorer > Lehrmittel", beschreibung: "Lehrmittel für die grundlegende Algebra (Brüche, lineare Gleichungen, quadratische Gleichungen, Potenzen, Exponentialfunktionen, Logarithmus)." },
@@ -187,9 +199,13 @@
 
         { titel: "Geschichte 5G", ort: "Explorer > Zusammenfassungen", beschreibung: "Geschichtszusammenfassung für die 5. Gymnasialklasse." },
         { titel: "Geographie 5G", ort: "Explorer > Zusammenfassungen", beschreibung: "Geographiezusammenfassung für die 5. Gymnasialklasse." },
+        { titel: "Geschichte 6G", ort: "Explorer > Zusammenfassungen", beschreibung: "Geschichtszusammenfassung für die 6. Gymnasialklasse." },
+        { titel: "Geographie 6G", ort: "Explorer > Zusammenfassungen", beschreibung: "Geographiezusammenfassung für die 6. Gymnasialklasse." },
 
         { titel: "Moment of Realization", ort: "Explorer > Unterhaltungsliteratur", beschreibung: "Beschreibung des Werkes einfügen!" },
-        { titel: "Moment of Realization", ort: "Explorer > Unterhaltungsliteratur", beschreibung: "Beschreibung des Werkes einfügen! Nicht vergessen!!" },
+        { titel: "Moment of Realization 2", ort: "Explorer > Unterhaltungsliteratur", beschreibung: "Beschreibung des Werkes einfügen! Nicht vergessen!!" },
+
+        { titel: "MAKEITART", ort: "rr-utilities.github.io/MAKEITART", beschreibung: "" },
     ];
 
     const input = document.getElementById("searchInput");
