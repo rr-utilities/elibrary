@@ -9,79 +9,12 @@
     <meta name="apple-mobile-web-app-title" content="eLibrary">
 
     <title>eLibrary v.1.1</title>
-    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="styles.css">
 
     <link rel="icon" href="../Lager/Favicon/favicon.jpg" type="image/jpg">
     <link rel="apple-touch-icon" href="../Lager/Favicon/apple-icon.jpg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-
-<style>
-    main {
-        min-height: calc(100vh - 140px);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 20px;
-        background: #f5f8fa;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-
-    #searchInput {
-        width: 320px;
-        max-width: 90vw;
-        padding: 14px 20px;
-        font-size: 1.1rem;
-        border: 2px solid #007bff;
-        border-radius: 30px;
-        box-shadow: 0 3px 8px rgba(0, 123, 255, 0.2);
-        outline: none;
-        transition: border-color 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    #searchInput:focus {
-        border-color: #0056b3;
-        box-shadow: 0 0 10px #0056b3;
-    }
-
-    #results {
-        width: 320px;
-        max-width: 90vw;
-        margin-top: 25px;
-    }
-
-    .result-item {
-        background: #fff;
-        border-radius: 12px;
-        padding: 15px 20px;
-        margin-bottom: 15px;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        transition: background-color 0.2s ease;
-    }
-
-    .result-item:hover {
-        background-color: #e9f0ff;
-    }
-
-    .result-item h5 {
-        margin: 0 0 6px 0;
-        color: #003366;
-        font-weight: 600;
-    }
-
-    .result-item div {
-        font-size: 0.9rem;
-        color: #555;
-        margin-bottom: 4px;
-    }
-
-    .result-item div:last-child {
-        color: #333;
-    }
-</style>
-
-<body>
 
 <header>
     <h3>eLibrary</h3>
@@ -96,10 +29,12 @@
     </nav>
 </header>
 
-<main>
-    <input type="text" id="searchInput" placeholder="Name des Werks eingeben…" autocomplete="off" />
-    <div id="results"></div>
-</main>
+<body>
+    <div class="main-search">
+        <input type="text" id="searchInput" placeholder="Name des Werks eingeben…" autocomplete="off" />
+        <div id="results"></div>
+    </div>
+</body>
 
 <footer>
     <h4>&copy; 2025 - 2026 <a href="https://sites.google.com/view/r-ravinthrarasa/projekte/education-utilities" target="_blank"
@@ -109,137 +44,105 @@
     </h4>
 </footer>
 
-</body>
+<script> const werke = [
+    { titel: "Mathenachhilfe, Französischnachhilfe uvm.", ort: "Startseite > Werbung", beschreibung: "Ich biete individuelle Nachhilfe in Mathematik und Französisch für Schülerinnen und Schüler verschiedner Schulstufe - fokussiert, effizient und verständlich." },
 
-<script>
-    const werke = [
-        { titel: "Mathenachhilfe, Französischnachhilfe uvm.", ort: "Startseite > Werbung", beschreibung: "Ich biete individuelle Nachhilfe in Mathematik und Französisch für Schülerinnen und Schüler verschiedner Schulstufe - fokussiert, effizient und verständlich." },
+    { titel: "Übersicht der Mathematiktheorie", ort: "Startseite > Wissenschaften fürs Gymnasium", beschreibung: "Übersicht der Mathematikthorie auf gymnasialem Niveau." },
+    { titel: "Übersicht der Physiktheorie", ort: "Startseite > Wissenschaften fürs Gymnasium", beschreibung: "Übersicht der Physikthorie auf gymnasialem Niveau." },
+    { titel: "Übersicht der Chemiektheorie", ort: "Startseite > Wissenschaften fürs Gymnasium", beschreibung: "Übersicht der Chemiethorie auf gymnasialem Niveau." },
+    { titel: "Übersicht der Biologietheorie", ort: "Startseite > Wissenschaften fürs Gymnasium", beschreibung: "Übersicht der Biologiethorie auf gymnasialem Niveau." },
+    { titel: "Übersicht der Astronomietheorie", ort: "Startseite > Wissenschaften fürs Gymnasium", beschreibung: "Übersicht der Astronomiethorie auf gymnasialem Niveau." },
+    { titel: "Grundlagen der Psychologie", ort: "Startseite > Wissenschaften fürs Gymnasium", beschreibung: "Grundlagen der Psychologie auf gymnasialem Niveau." },
 
-        { titel: "Übersicht der Mathematiktheorie", ort: "Startseite > Wissenschaften fürs Gymnasium", beschreibung: "Übersicht der Mathematikthorie auf gymnasialem Niveau." },
-        { titel: "Übersicht der Physiktheorie", ort: "Startseite > Wissenschaften fürs Gymnasium", beschreibung: "Übersicht der Physikthorie auf gymnasialem Niveau." },
-        { titel: "Übersicht der Chemiektheorie", ort: "Startseite > Wissenschaften fürs Gymnasium", beschreibung: "Übersicht der Chemiethorie auf gymnasialem Niveau." },
-        { titel: "Übersicht der Biologietheorie", ort: "Startseite > Wissenschaften fürs Gymnasium", beschreibung: "Übersicht der Biologiethorie auf gymnasialem Niveau." },
-        { titel: "Übersicht der Astronomietheorie", ort: "Startseite > Wissenschaften fürs Gymnasium", beschreibung: "Übersicht der Astronomiethorie auf gymnasialem Niveau." },
-        { titel: "Grundlagen der Psychologie", ort: "Startseite > Wissenschaften fürs Gymnasium", beschreibung: "Grundlagen der Psychologie auf gymnasialem Niveau." },
+    { titel: "BKS Assistant", ort: "Startseite > Multimedia", beschreibung: "Portal zur Unterstützung des Schulalltags an der Bündner Kantonsschule Chur (BKS Chur)" },
+    { titel: "bks_chur", ort: "Startseite > Multimedia", beschreibung: "Ein Quizlet-Account mit den wichtigsten Vokabeln aus (fast) allen Sprachen, die an der Bündner Kantonsschule Chur unterrichtet werden." },
+    { titel: "kopfrechner", ort: "Startseite > Multimedia", beschreibung: "Eine simple und schnelle Art, um Kopfrechnen sogar im Alltag zu üben." },
+    { titel: "kopfentspanner", ort: "Startseite > Multimedia", beschreibung: "Ein simpler Timer, um den Kopf beim Lernen zu entlasen." },
+    { titel: "HexaLengua: webBook / webCards", ort: "Startseite > Multimedia", beschreibung: "Die Online-Versionen von HexaLengua Grammatik und Vokabeln." },
+    { titel: "Tutor Assistant", ort: "Startseite > Multimedia", beschreibung: "Portal zur Unterstützung in der Tätigkeit als Nachhilfelehrer*in." },
 
-        { titel: "BKS Assistant", ort: "Startseite > Multimedia", beschreibung: "Portal zur Unterstützung des Schulalltags an der Bündner Kantonsschule Chur (BKS Chur)" },
-        { titel: "bks_chur", ort: "Startseite > Multimedia", beschreibung: "Ein Quizlet-Account mit den wichtigsten Vokabeln aus (fast) allen Sprachen, die an der Bündner Kantonsschule Chur unterrichtet werden." },
-        { titel: "kopfrechner", ort: "Startseite > Multimedia", beschreibung: "Eine simple und schnelle Art, um Kopfrechnen sogar im Alltag zu üben." },
-        { titel: "kopfentspanner", ort: "Startseite > Multimedia", beschreibung: "Ein simpler Timer, um den Kopf beim Lernen zu entlasen." },
-        { titel: "HexaLengua: webBook / webCards", ort: "Startseite > Multimedia", beschreibung: "Die Online-Versionen von HexaLengua Grammatik und Vokabeln." },
-        { titel: "Tutor Assistant", ort: "Startseite > Multimedia", beschreibung: "Portal zur Unterstützung in der Tätigkeit als Nachhilfelehrer*in." },
+    { titel: "Grundoperationen in N, Z, Q und R", ort: "Startseite > Exakte Wissenschaften", beschreibung: "Skript mit Theorie und Übungen zu den Grundoperationen in N, Z, Q und R." },
+    { titel: "Logarithmen", ort: "Startseite > Exakte Wissenschaften", beschreibung: "Skript mit Theorie und Übungen zu Logarithmen." },
+    { titel: "Folgen und Reihen - Grundlagen", ort: "Startseite > Exakte Wissenschaften", beschreibung: "Skript mit Theorie und Übungen zu Folgen & Reihen." },
+    { titel: "Trigonometrie", ort: "Startseite > Exakte Wissenschaften", beschreibung: "Skript mit Theorie und Übungen zu der Trigonometrie." },
+    { titel: "Infinitesimalrechnung", ort: "Startseite > Exakte Wissenschaften", beschreibung: "Skript mit Theorie und Übungen zu der Differential- und Integralrechnung." },
+    { titel: "Vektorgeometrie - Grundlagen", ort: "Startseite > Exakte Wissenschaften", beschreibung: "Skript mit Theorie und Übungen zu der Vektorrechnung und der analytischen Geometrie." },
+    { titel: "Stochastik - Einführung", ort: "Startseite > Exakte Wissenschaften", beschreibung: "Skript mit Theorie und Beispielen zu der Kombinatorik und der Warhscheinlichkeitsrechnung." },
+    { titel: "Parameteranalyse", ort: "Startseite > Exakte Wissenschaften", beschreibung: "Analyse von Parameterwirkung in Funktionsgleichung / Unabhängige Arbeit." },
 
-        { titel: "Grundoperationen in N, Z, Q und R", ort: "Startseite > Exakte Wissenschaften", beschreibung: "Skript mit Theorie und Übungen zu den Grundoperationen in N, Z, Q und R." },
-        { titel: "Logarithmen", ort: "Startseite > Exakte Wissenschaften", beschreibung: "Skript mit Theorie und Übungen zu Logarithmen." },
-        { titel: "Folgen und Reihen - Grundlagen", ort: "Startseite > Exakte Wissenschaften", beschreibung: "Skript mit Theorie und Übungen zu Folgen & Reihen." },
-        { titel: "Trigonometrie", ort: "Startseite > Exakte Wissenschaften", beschreibung: "Skript mit Theorie und Übungen zu der Trigonometrie." },
-        { titel: "Infinitesimalrechnung", ort: "Startseite > Exakte Wissenschaften", beschreibung: "Skript mit Theorie und Übungen zu der Differential- und Integralrechnung." },
-        { titel: "Vektorgeometrie - Grundlagen", ort: "Startseite > Exakte Wissenschaften", beschreibung: "Skript mit Theorie und Übungen zu der Vektorrechnung und der analytischen Geometrie." },
-        { titel: "Stochastik - Einführung", ort: "Startseite > Exakte Wissenschaften", beschreibung: "Skript mit Theorie und Beispielen zu der Kombinatorik und der Warhscheinlichkeitsrechnung." },
-        { titel: "Parameteranalyse", ort: "Startseite > Exakte Wissenschaften", beschreibung: "Analyse von Parameterwirkung in Funktionsgleichung / Unabhängige Arbeit." },
+    { titel: "Literaturjournal 2024", ort: "Startseite > Linguistik und Literatur", beschreibung: "Literaturanalyse / -archiv einiger Schullektüren aus 2024." },
+    { titel: "Literaturjournal 2025", ort: "Startseite > Linguistik und Literatur", beschreibung: "Literaturanalyse / -archiv einiger Schullektüren aus 2025." },
+    { titel: "Il fundament rumantsch sursilvan", ort: "Startseite > Linguistik und Literatur", beschreibung: "Ein Nachschlagewerk für grundlegende Sprachkenntnisse im Romanischen (sursilvan)." },
+    { titel: "SprachRefresher: Französisch, Spanisch, Italienisch", ort: "Startseite > Linguistik und Literatur", beschreibung: "Ein Nachschlagewerk zum Erfrischen der Sprachkenntnisse in diesen Sprachen." },
+    { titel: "HexaLengua: Gramamtik", ort: "Startseite > Linguistik und Literatur", beschreibung: "Ein interlinguales Nachschlagewerk (mit Latein, Französisch, Italienisch, Romanisch, Englisch, Deutsch)" },
+    { titel: "HexaLengua: Vokabeln", ort: "Startseite > Linguistik und Literatur", beschreibung: "Ein interlinguales Wörterbuch (mit Latein, Französisch, Italienisch, Romanisch, Englisch, Deutsch)" },
+    { titel: "Lateinische Morphologie, Syntax und Literatur", ort: "Startseite > Linguistik und Literatur", beschreibung: "Von grundlegender Lateingrammatik bis zu Literaturanalyse für die Maturaprüfung." },
+    { titel: "Spanische Morphologie, Syntax und Literatur", ort: "Startseite > Linguistik und Literatur", beschreibung: "Von grundlegender Spanischgrammatik bis zu Literaturanalyse für die Maturaprüfung." },
+    { titel: "Französische Morphologie, Syntax und Literatur", ort: "Startseite > Linguistik und Literatur", beschreibung: "Von grundlegender Französischgrammatik bis zu Literaturanalyse für die Maturaprüfung." },
+    { titel: "Konzept der deutschen Literatur- und Textanalyse", ort: "Startseite > Linguistik und Literatur", beschreibung: "Literaturanalyse / -archiv und Textanalyse für die Maturprüfung." },
 
-        { titel: "Literaturjournal 2024", ort: "Startseite > Linguistik und Literatur", beschreibung: "Literaturanalyse / -archiv einiger Schullektüren aus 2024." },
-        { titel: "Literaturjournal 2025", ort: "Startseite > Linguistik und Literatur", beschreibung: "Literaturanalyse / -archiv einiger Schullektüren aus 2025." },
-        { titel: "Il fundament rumantsch sursilvan", ort: "Startseite > Linguistik und Literatur", beschreibung: "Ein Nachschlagewerk für grundlegende Sprachkenntnisse im Romanischen (sursilvan)." },
-        { titel: "SprachRefresher: Französisch, Spanisch, Italienisch", ort: "Startseite > Linguistik und Literatur", beschreibung: "Ein Nachschlagewerk zum Erfrischen der Sprachkenntnisse in diesen Sprachen." },
-        { titel: "HexaLengua: Gramamtik", ort: "Startseite > Linguistik und Literatur", beschreibung: "Ein interlinguales Nachschlagewerk (mit Latein, Französisch, Italienisch, Romanisch, Englisch, Deutsch)" },
-        { titel: "HexaLengua: Vokabeln", ort: "Startseite > Linguistik und Literatur", beschreibung: "Ein interlinguales Wörterbuch (mit Latein, Französisch, Italienisch, Romanisch, Englisch, Deutsch)" },
-        { titel: "Lateinische Morphologie, Syntax und Literatur", ort: "Startseite > Linguistik und Literatur", beschreibung: "Von grundlegender Lateingrammatik bis zu Literaturanalyse für die Maturaprüfung." },
-        { titel: "Spanische Morphologie, Syntax und Literatur", ort: "Startseite > Linguistik und Literatur", beschreibung: "Von grundlegender Spanischgrammatik bis zu Literaturanalyse für die Maturaprüfung." },
-        { titel: "Französische Morphologie, Syntax und Literatur", ort: "Startseite > Linguistik und Literatur", beschreibung: "Von grundlegender Französischgrammatik bis zu Literaturanalyse für die Maturaprüfung." },
-        { titel: "Konzept der deutschen Literatur- und Textanalyse", ort: "Startseite > Linguistik und Literatur", beschreibung: "Literaturanalyse / -archiv und Textanalyse für die Maturprüfung." },
+    { titel: "Algebra 7/8", ort: "Explorer > Lehrmittel", beschreibung: "Lehrmittel für den Übergang zwischen Primarstufe und Sekundar- / Gymnasialstufe (Variablen, Brüche, natürliche Zahlen, negative Zahlen etc.)." },
+    { titel: "Algebra 9/10", ort: "Explorer > Lehrmittel", beschreibung: "Lehrmittel für die grundlegende Algebra (Brüche, lineare Gleichungen, quadratische Gleichungen, Potenzen, Exponentialfunktionen, Logarithmus)." },
+    { titel: "Analysis", ort: "Explorer > Lehrmittel", beschreibung: "Lehrmittel für die grundlegende Analysis (Folgen und Reihen, Grenzwerte, Differentialrechnung, Integral etc.)." },
+    { titel: "Physik - anwenden und verstehen", ort: "Explorer > Lehrmittel", beschreibung: "Lehrmittel für die Physik von grundlegender Mechanik bis fortgeschrittener Magnetismus." },
+    { titel: "Formeln, Tabellen, Begriffe", ort: "Explorer > Lehrmittel", beschreibung: "Übersicht von Formeln, Tabellen und Begriffen in der Mathematik, Physik, Astronomie und Chemie." },
+    { titel: "Le Cours intensif", ort: "Explorer > Lehrmittel", beschreibung: "Französisch-Lehrmittel von A1 bis B2." },
+    { titel: "Espresso Ragazzi", ort: "Explorer > Lehrmittel", beschreibung: "Ein Italienischlehrmittel von Grundlagen bis zur Vorbereitung für die Maturaprüfung." },
+    { titel: "Puente Nuevo", ort: "Explorer > Lehrmittel", beschreibung: "Ein Spanischlehrmittel fürs Spanischlernen im Schnellkurs." },
+    { titel: "Ready for C1 Advanced", ort: "Explorer > Lehrmittel", beschreibung: "Ein Vorbereitungskurs für die CAE Prüfung auf dem C1 Level." },
+    { titel: "En lingia directa", ort: "Explorer > Lehrmittel", beschreibung: "Ein Lehrmittel fürs Romanisch Sursilvan mit der grundlegender Grammatik und Wörtern." },
+    { titel: "Medias in Res!", ort: "Explorer > Lehrmittel", beschreibung: "Lateinlehrmittel für eine grundlegende Einfürhung und auch für die Latinumsvorbereitung." },
+    { titel: "Geschichte fürs Gymnasium 1", ort: "Explorer > Lehrmittel", beschreibung: "Geschichte der Menschheit in chronologischer Folge präpariert fürs Gymnasium (ab Steinzeit)." },
+    { titel: "Geschichte fürs Gymnasium 2", ort: "Explorer > Lehrmittel", beschreibung: "Geschichte der Menschheit in chronologischer Folge präpariert fürs Gymnasium (ab Mittelalter)." },
+    { titel: "Geschichte fürs Gymnasium 3", ort: "Explorer > Lehrmittel", beschreibung: "Geschichte der Menschheit in chronologischer Folge präpariert fürs Gymnasium (ab Ersten Weltkrieg)." },
+    { titel: "Psychologie (Hobmair)", ort: "Explorer > Lehrmittel", beschreibung: "Einführung in die Psychologie und Präsentation von den wichtigsten Grundlagefächer dieser Wissenschaft." },
 
-        { titel: "Algebra 7/8", ort: "Explorer > Lehrmittel", beschreibung: "Lehrmittel für den Übergang zwischen Primarstufe und Sekundar- / Gymnasialstufe (Variablen, Brüche, natürliche Zahlen, negative Zahlen etc.)." },
-        { titel: "Algebra 9/10", ort: "Explorer > Lehrmittel", beschreibung: "Lehrmittel für die grundlegende Algebra (Brüche, lineare Gleichungen, quadratische Gleichungen, Potenzen, Exponentialfunktionen, Logarithmus)." },
-        { titel: "Analysis", ort: "Explorer > Lehrmittel", beschreibung: "Lehrmittel für die grundlegende Analysis (Folgen und Reihen, Grenzwerte, Differentialrechnung, Integral etc.)." },
-        { titel: "Physik - anwenden und verstehen", ort: "Explorer > Lehrmittel", beschreibung: "Lehrmittel für die Physik von grundlegender Mechanik bis fortgeschrittener Magnetismus." },
-        { titel: "Formeln, Tabellen, Begriffe", ort: "Explorer > Lehrmittel", beschreibung: "Übersicht von Formeln, Tabellen und Begriffen in der Mathematik, Physik, Astronomie und Chemie." },
-        { titel: "Le Cours intensif", ort: "Explorer > Lehrmittel", beschreibung: "Französisch-Lehrmittel von A1 bis B2." },
-        { titel: "Espresso Ragazzi", ort: "Explorer > Lehrmittel", beschreibung: "Ein Italienischlehrmittel von Grundlagen bis zur Vorbereitung für die Maturaprüfung." },
-        { titel: "Puente Nuevo", ort: "Explorer > Lehrmittel", beschreibung: "Ein Spanischlehrmittel fürs Spanischlernen im Schnellkurs." },
-        { titel: "Ready for C1 Advanced", ort: "Explorer > Lehrmittel", beschreibung: "Ein Vorbereitungskurs für die CAE Prüfung auf dem C1 Level." },
-        { titel: "En lingia directa", ort: "Explorer > Lehrmittel", beschreibung: "Ein Lehrmittel fürs Romanisch Sursilvan mit der grundlegender Grammatik und Wörtern." },
-        { titel: "Medias in Res!", ort: "Explorer > Lehrmittel", beschreibung: "Lateinlehrmittel für eine grundlegende Einfürhung und auch für die Latinumsvorbereitung." },
-        { titel: "Geschichte fürs Gymnasium 1", ort: "Explorer > Lehrmittel", beschreibung: "Geschichte der Menschheit in chronologischer Folge präpariert fürs Gymnasium (ab Steinzeit)." },
-        { titel: "Geschichte fürs Gymnasium 2", ort: "Explorer > Lehrmittel", beschreibung: "Geschichte der Menschheit in chronologischer Folge präpariert fürs Gymnasium (ab Mittelalter)." },
-        { titel: "Geschichte fürs Gymnasium 3", ort: "Explorer > Lehrmittel", beschreibung: "Geschichte der Menschheit in chronologischer Folge präpariert fürs Gymnasium (ab Ersten Weltkrieg)." },
-        { titel: "Psychologie (Hobmair)", ort: "Explorer > Lehrmittel", beschreibung: "Einführung in die Psychologie und Präsentation von den wichtigsten Grundlagefächer dieser Wissenschaft." },
+    { titel: "Quizlet", ort: "Explorer > Webseiten", beschreibung: "Lernen mit Karteikarten und Co." },
+    { titel: "StudySmarter", ort: "Explorer > Webseiten", beschreibung: "Lernen mit Zusammenfassungen und Co." },
+    { titel: "simpleclub", ort: "Explorer > Webseiten", beschreibung: "Lernen mit Videos und Co." },
+    { titel: "LearningApps", ort: "Explorer > Webseiten", beschreibung: "Lernne mit interaktiven Medien und Co." },
+    { titel: "Schlaukopf", ort: "Explorer > Webseiten", beschreibung: "Lernen mit Quizfragen und Co." },
+    { titel: "Mathebibel", ort: "Explorer > Webseiten", beschreibung: "Mathe lernen, online und einfach." },
+    { titel: "Reader OfV", ort: "Explorer > Webseiten", beschreibung: "Online Portal für eBooks von Orell Füssli." },
+    { titel: "Projekt Gutenberg", ort: "Explorer > Webseiten", beschreibung: "Gratis eBooks auf Deutsch." },
+    { titel: "Project Gutenberg", ort: "Explorer > Webseiten", beschreibung: "Gratis fremdsprachige eBooks." },
+    { titel: "Woxikon", ort: "Explorer > Webseiten", beschreibung: "Interaktives Deutsch-Wörterbuch." },
+    { titel: "DeepL", ort: "Explorer > Webseiten", beschreibung: "Fortgeschrittenes Übersetzungstool." },
+    { titel: "Leo", ort: "Explorer > Webseiten", beschreibung: "Übersetzungstool mit integriertem Wörterbuch." },
+    { titel: "PONS", ort: "Explorer > Webseiten", beschreibung: "Umfangreiches Wörterbuch." },
+    { titel: "Reverso Context", ort: "Explorer > Webseiten", beschreibung: "Kontextabhängiges Übersetzungstool." },
+    { titel: "Pomofocus", ort: "Explorer > Webseiten", beschreibung: "Timer zum Lernen mit der Pomodoro-Technik." },
 
-        { titel: "Quizlet", ort: "Explorer > Webseiten", beschreibung: "Lernen mit Karteikarten und Co." },
-        { titel: "StudySmarter", ort: "Explorer > Webseiten", beschreibung: "Lernen mit Zusammenfassungen und Co." },
-        { titel: "simpleclub", ort: "Explorer > Webseiten", beschreibung: "Lernen mit Videos und Co." },
-        { titel: "LearningApps", ort: "Explorer > Webseiten", beschreibung: "Lernne mit interaktiven Medien und Co." },
-        { titel: "Schlaukopf", ort: "Explorer > Webseiten", beschreibung: "Lernen mit Quizfragen und Co." },
-        { titel: "Mathebibel", ort: "Explorer > Webseiten", beschreibung: "Mathe lernen, online und einfach." },
-        { titel: "Reader OfV", ort: "Explorer > Webseiten", beschreibung: "Online Portal für eBooks von Orell Füssli." },
-        { titel: "Projekt Gutenberg", ort: "Explorer > Webseiten", beschreibung: "Gratis eBooks auf Deutsch." },
-        { titel: "Project Gutenberg", ort: "Explorer > Webseiten", beschreibung: "Gratis fremdsprachige eBooks." },
-        { titel: "Woxikon", ort: "Explorer > Webseiten", beschreibung: "Interaktives Deutsch-Wörterbuch." },
-        { titel: "DeepL", ort: "Explorer > Webseiten", beschreibung: "Fortgeschrittenes Übersetzungstool." },
-        { titel: "Leo", ort: "Explorer > Webseiten", beschreibung: "Übersetzungstool mit integriertem Wörterbuch." },
-        { titel: "PONS", ort: "Explorer > Webseiten", beschreibung: "Umfangreiches Wörterbuch." },
-        { titel: "Reverso Context", ort: "Explorer > Webseiten", beschreibung: "Kontextabhängiges Übersetzungstool." },
-        { titel: "Pomofocus", ort: "Explorer > Webseiten", beschreibung: "Timer zum Lernen mit der Pomodoro-Technik." },
+    { titel: "Die Physiker", ort: "Explorer > Schullektüren (Deutsch)", beschreibung: "Die Physiker von Friedrich Dürrenmatt" },
+    { titel: "Der Richter und sein Henker", ort: "Explorer > Schullektüren (Deutsch)", beschreibung: "Der Richter und sein Henker von Friedrich Dürrenmatt" },
+    { titel: "Der Verdacht", ort: "Explorer > Schullektüren (Deutsch)", beschreibung: "Der Verdacht von Friedrich Dürrenmatt" },
+    { titel: "Der Besuch der alten Dame", ort: "Explorer > Schullektüren (Deutsch)", beschreibung: "Der Besuch der alten Dame von Friedrich Dürrenmatt" },
+    { titel: "Das Versprechen", ort: "Explorer > Schullektüren (Deutsch)", beschreibung: "Das Versprechen von Friedrich Dürrenmatt" },
+    { titel: "Kabale und Liebe", ort: "Explorer > Schullektüren (Deutsch)", beschreibung: "Kabale und Liebe von Friedrich Schiller" },
+    { titel: "Maria Stuart", ort: "Explorer > Schullektüren (Deutsch)", beschreibung: "Maria Stuart von Friedrich Schiller" },
+    { titel: "Der Fall Collini", ort: "Explorer > Schullektüren (Deutsch)", beschreibung: "Der Fall Collini von Ferdinand von Schirach" },
+    { titel: "Terror", ort: "Explorer > Schullektüren (Deutsch)", beschreibung: "Terror von Ferdinand von Schirach" },
+    { titel: "Die Entdeckung der Currywurst", ort: "Explorer > Schullektüren (Deutsch)", beschreibung: "Die Entdeckung der Currywurst von Uwe Timm" },
+    { titel: "Der Vorleser", ort: "Explorer > Schullektüren (Deutsch)", beschreibung: "Der Vorleser von Bernhard Schlink" },
+    { titel: "Unterm Rad", ort: "Explorer > Schullektüren (Deutsch)", beschreibung: "Unterm Rad von Hermann Hesse" },
+    { titel: "Die Weber", ort: "Explorer > Schullektüren (Deutsch)", beschreibung: "Die Weber von Gerhart Hauptmann" },
+    { titel: "Aus dem Leben eines Taugenichts", ort: "Explorer > Schullektüren (Deutsch)", beschreibung: "Aus dem Leben eines Taugenichts von Joseph von Eichendorff" },
+    { titel: "Der Schimmelreiter", ort: "Explorer > Schullektüren (Deutsch)", beschreibung: "Der Schimmelreiter von Theodor Storm" },
+    { titel: "Paradise Garden", ort: "Explorer > Schullektüren (Deutsch)", beschreibung: "Paradise Garden von Elena Fischer" },
+    { titel: "Der Prozess", ort: "Explorer > Schullektüren (Deutsch)", beschreibung: "Der Prozess von Franz Kafka" },
 
-        { titel: "Die Physiker", ort: "Explorer > Schullektüren (Deutsch)", beschreibung: "Die Physiker von Friedrich Dürrenmatt" },
-        { titel: "Der Richter und sein Henker", ort: "Explorer > Schullektüren (Deutsch)", beschreibung: "Der Richter und sein Henker von Friedrich Dürrenmatt" },
-        { titel: "Der Verdacht", ort: "Explorer > Schullektüren (Deutsch)", beschreibung: "Der Verdacht von Friedrich Dürrenmatt" },
-        { titel: "Der Besuch der alten Dame", ort: "Explorer > Schullektüren (Deutsch)", beschreibung: "Der Besuch der alten Dame von Friedrich Dürrenmatt" },
-        { titel: "Das Versprechen", ort: "Explorer > Schullektüren (Deutsch)", beschreibung: "Das Versprechen von Friedrich Dürrenmatt" },
-        { titel: "Kabale und Liebe", ort: "Explorer > Schullektüren (Deutsch)", beschreibung: "Kabale und Liebe von Friedrich Schiller" },
-        { titel: "Maria Stuart", ort: "Explorer > Schullektüren (Deutsch)", beschreibung: "Maria Stuart von Friedrich Schiller" },
-        { titel: "Der Fall Collini", ort: "Explorer > Schullektüren (Deutsch)", beschreibung: "Der Fall Collini von Ferdinand von Schirach" },
-        { titel: "Terror", ort: "Explorer > Schullektüren (Deutsch)", beschreibung: "Terror von Ferdinand von Schirach" },
-        { titel: "Die Entdeckung der Currywurst", ort: "Explorer > Schullektüren (Deutsch)", beschreibung: "Die Entdeckung der Currywurst von Uwe Timm" },
-        { titel: "Der Vorleser", ort: "Explorer > Schullektüren (Deutsch)", beschreibung: "Der Vorleser von Bernhard Schlink" },
-        { titel: "Unterm Rad", ort: "Explorer > Schullektüren (Deutsch)", beschreibung: "Unterm Rad von Hermann Hesse" },
-        { titel: "Die Weber", ort: "Explorer > Schullektüren (Deutsch)", beschreibung: "Die Weber von Gerhart Hauptmann" },
-        { titel: "Aus dem Leben eines Taugenichts", ort: "Explorer > Schullektüren (Deutsch)", beschreibung: "Aus dem Leben eines Taugenichts von Joseph von Eichendorff" },
-        { titel: "Der Schimmelreiter", ort: "Explorer > Schullektüren (Deutsch)", beschreibung: "Der Schimmelreiter von Theodor Storm" },
-        { titel: "Paradise Garden", ort: "Explorer > Schullektüren (Deutsch)", beschreibung: "Paradise Garden von Elena Fischer" },
-        { titel: "Der Prozess", ort: "Explorer > Schullektüren (Deutsch)", beschreibung: "Der Prozess von Franz Kafka" },
+    { titel: "Geschichte 5G", ort: "Explorer > Zusammenfassungen", beschreibung: "Geschichtszusammenfassung für die 5. Gymnasialklasse." },
+    { titel: "Geographie 5G", ort: "Explorer > Zusammenfassungen", beschreibung: "Geographiezusammenfassung für die 5. Gymnasialklasse." },
+    { titel: "Geschichte 6G", ort: "Explorer > Zusammenfassungen", beschreibung: "Geschichtszusammenfassung für die 6. Gymnasialklasse." },
+    { titel: "Geographie 6G", ort: "Explorer > Zusammenfassungen", beschreibung: "Geographiezusammenfassung für die 6. Gymnasialklasse." },
 
-        { titel: "Geschichte 5G", ort: "Explorer > Zusammenfassungen", beschreibung: "Geschichtszusammenfassung für die 5. Gymnasialklasse." },
-        { titel: "Geographie 5G", ort: "Explorer > Zusammenfassungen", beschreibung: "Geographiezusammenfassung für die 5. Gymnasialklasse." },
-        { titel: "Geschichte 6G", ort: "Explorer > Zusammenfassungen", beschreibung: "Geschichtszusammenfassung für die 6. Gymnasialklasse." },
-        { titel: "Geographie 6G", ort: "Explorer > Zusammenfassungen", beschreibung: "Geographiezusammenfassung für die 6. Gymnasialklasse." },
+    { titel: "Moment of Realization", ort: "Explorer > Unterhaltungsliteratur", beschreibung: "Beschreibung des Werkes einfügen!" },
+    { titel: "Moment of Realization 2", ort: "Explorer > Unterhaltungsliteratur", beschreibung: "Beschreibung des Werkes einfügen! Nicht vergessen!!" },
 
-        { titel: "Moment of Realization", ort: "Explorer > Unterhaltungsliteratur", beschreibung: "Beschreibung des Werkes einfügen!" },
-        { titel: "Moment of Realization 2", ort: "Explorer > Unterhaltungsliteratur", beschreibung: "Beschreibung des Werkes einfügen! Nicht vergessen!!" },
-
-        { titel: "MAKEITART", ort: "rr-utilities.github.io/MAKEITART", beschreibung: "" },
+    { titel: "MAKEITART", ort: "rr-utilities.github.io/MAKEITART", beschreibung: "" },
     ];
-
-    const input = document.getElementById("searchInput");
-    const resultsDiv = document.getElementById("results");
-
-    input.addEventListener("input", () => {
-      const query = input.value.toLowerCase().trim();
-
-      if (!query) {
-        resultsDiv.innerHTML = "";
-        return;
-      }
-
-      const filtered = werke.filter(w =>
-        w.titel.toLowerCase().includes(query) ||
-        w.ort.toLowerCase().includes(query) ||
-        w.beschreibung.toLowerCase().includes(query)
-      );
-
-      if (filtered.length === 0) {
-        resultsDiv.innerHTML = "<p>Keine Ergebnisse gefunden.</p>";
-        return;
-      }
-
-      resultsDiv.innerHTML = filtered.map(w => `
-        <div class="result-item">
-          <h5>${w.titel}</h5>
-          <div><strong>Ort:</strong> ${w.ort}</div>
-          <div>${w.beschreibung}</div>
-        </div>
-      `).join("");
-    });
 </script>
+
+<script src="script.js"></script>
 
 </html>

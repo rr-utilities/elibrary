@@ -9,34 +9,32 @@
     <meta name="apple-mobile-web-app-title" content="eLibrary">
 
     <title>eLibrary v.1.1</title>
-    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="styles.css">
 
     <link rel="icon" href="../Lager/Favicon/favicon.jpg" type="image/jpg">
     <link rel="apple-touch-icon" href="../Lager/Favicon/apple-icon.jpg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
-<body>
-    <header>
-        <h3>eLibrary</h3>
-        <nav>
-            <ul>
-                <li><a href="../index.html">Startseite</a></li>
-                <li><a href="explorer.html">Explorer</a></li>
-                <li><a href="news.html">News</a></li>
-                <li><a href="https://sites.google.com/view/r-ravinthrarasa/landing-page" title="Suchen"><i class="fas fa-address-card"></i></a></li>
-                <li><a href="suche.html" title="Suchen"><i class="fas fa-search"></i></a></li>
-            </ul>
-        </nav>
-    </header>
-</body>
+<header>
+    <h3>eLibrary</h3>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Startseite</a></li>
+            <li><a href="explorer.html">Explorer</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="https://sites.google.com/view/r-ravinthrarasa/landing-page" title="Suchen"><i class="fas fa-address-card"></i></a></li>
+            <li><a href="suche.html" title="Suchen"><i class="fas fa-search"></i></a></li>
+        </ul>
+    </nav>
+</header>
 
 <body>
     <div class="news-grid">
         <div class="news-item" onclick="openNews(this)">
             <h1>Publikationen für MP26 und eLibrary v.1.2</h1>
             <span class="news-date">11.04.2026</span>
-            <p class="news-description">Die Maturaprüfungen (MP26) stehen an! Dementsprechend werden viele Werke bezüglich der Prüfung veröffentlicht: "Wissenschaften fürs Gymnasium"-Reihe, "Französische bzw. Lateinische bzw. Spanische Morphologie, Syntax und Literatur", die neue Kategorie "Exakte Wissenschaften" und diverse Zusammenfassungen. Zusätzlich gibt es zur Abwechslung einige neue Werke in der Unterhaltungsliteratur. Technisch gibt es auch Neurungen, die nun in der aktuellsten Version 1.2 untergebracht ist. Viel Glück!</p>
+            <p class="news-description">Die Maturaprüfungen (MP26) stehen an! Dementsprechend werden viele Werke bezüglich der Prüfung veröffentlicht: "Wissenschaften fürs Gymnasium"-Reihe, "Französische bzw. Lateinische bzw. Spanische Morphologie, Syntax und Literatur", die neue Kategorie "Exakte Wissenschaften" und diverse Zusammenfassungen. Zusätzlich gibt es zur Abwechslung einige neue Werke in der Unterhaltungsliteratur. Technisch gibt es auch Neurungen, die nun in der aktuellsten Version 1.2 untergebracht sind. Viel Glück!</p>
             <img src="../Lager/Werke/WfG/cover_1.jpg" alt="News Image" class="news-image">
         </div>
 
@@ -56,9 +54,7 @@
         </div>
     </div>
 
-    <div class="news-grid">
-        <!-- -->
-    </div>
+    <br>
 
     <div id="news-overlay" class="news-overlay" onclick="closeNews()">
         <div class="news-popup" onclick="event.stopPropagation();">
@@ -70,160 +66,6 @@
         </div>
     </div>
 </body>
-
-<style>
-    .news-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 15px;
-        padding: 20px;
-        width: 100%;
-        max-width: 1200px;
-        margin: 0 auto;
-        box-sizing: border-box;
-    }
-
-    .news-item {
-        background: #fff;
-        padding: 15px;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        transition: transform 0.2s ease-in-out;
-        width: 100%;
-        box-sizing: border-box;
-    }
-
-    .news-item:hover {
-        transform: scale(1.02);
-        z-index: 1;
-    }
-
-    @media screen and (max-width: 900px) {
-        .news-grid {
-            grid-template-columns: repeat(2, 1fr);
-        }
-    }
-
-    @media screen and (max-width: 600px) {
-        .news-grid {
-            grid-template-columns: 1fr;
-        }
-    }
-
-    .news-item h3 {
-        font-size: 16px;
-        margin-bottom: 5px;
-    }
-
-    .news-date {
-        font-size: 12px;
-        color: #666;
-    }
-
-    .news-description {
-        font-size: 14px;
-        color: #444;
-        margin-bottom: 10px;
-        text-align: justify;
-    }
-
-    .news-image {
-        width: 100%;
-        height: 150px;
-        object-fit: cover;
-        border-radius: 5px;
-    }
-
-    .news-overlay {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        background: rgba(0, 0, 0, 0.7);
-        justify-content: center;
-        align-items: flex-start;
-        overflow: auto;
-        padding-top: 150px;
-        z-index: 9999;
-    }
-
-    .news-popup {
-        background: rgba(255, 255, 255, 0.9);
-        padding: 20px;
-        border-radius: 8px;
-        width: 80%;
-        max-height: 70vh;
-        max-width: 600px;
-        text-align: center;
-        position: relative;
-        overflow-y: auto;
-    }
-
-    .news-popup img {
-        width: 100%;
-        border-radius: 5px;
-    }
-
-    .close-btn {
-        position: absolute;
-        top: 10px;
-        right: 15px;
-        font-size: 24px;
-        cursor: pointer;
-    }
-
-    .news-button {
-        display: inline-block;
-        margin-top: 15px;
-        padding: 10px 20px;
-        background: #007bff;
-        color: #fff;
-        text-decoration: none;
-        border-radius: 5px;
-    }
-
-    .news-button:hover {
-        background: #0056b3;
-    }
-
-    .disabled-button {
-        display: inline-block;
-        padding: 10px 15px;
-        margin: 5px;
-        background-color: #007bff;
-        color: white;
-        text-decoration: none;
-        display: inline-block;
-        border-radius: 5px;
-
-        cursor: not-allowed;
-        opacity: 0.5;
-        pointer-events: none;
-    }
-
-
-</style>
-
-<script>
-    function openNews(element) {
-        document.getElementById("overlay-img").src = element.querySelector(".news-image").src;
-        document.getElementById("overlay-title").innerText = element.querySelector("h1").innerText;
-        document.getElementById("overlay-date").innerText = element.querySelector(".news-date").innerText;
-        document.getElementById("overlay-description").innerText = element.querySelector(".news-description").innerText;
-
-        document.getElementById("news-overlay").style.display = "flex";
-    }
-
-    function closeNews() {
-        document.getElementById("news-overlay").style.display = "none";
-    }
-</script>
 
 <footer>
     <h4>&copy; 2025 - 2026 <a href="https://sites.google.com/view/r-ravinthrarasa/projekte/education-utilities" target="_blank" class="styled-link">Education Utilities</a>, alle <a href="https://sites.google.com/view/r-ravinthrarasa/impressum" target="_blank" class="styled-link">Rechte</a> vorbehalten.</h4>

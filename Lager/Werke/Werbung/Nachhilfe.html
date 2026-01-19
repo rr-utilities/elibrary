@@ -4,216 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Overlay</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
-
-        h4 {
-            text-align: left;
-        }
-
-        .container {
-            display: flex;
-            height: auto;
-        }
-
-        .left {
-            width: 50%;
-            background-color: #f0f0f0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 10px;
-        }
-
-        .left iframe {
-            width: 100%;
-            height: 90%;
-            border: none;
-            margin-bottom: 0;
-        }
-
-        .right {
-            width: 50%;
-            padding: 30px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-        }
-
-        .description p {
-            font-size: 14px;
-            line-height: 1.8;
-            text-align: justify;
-            color: #333;
-            margin-bottom: 12px;
-        }
-
-        .buttons a {
-            display: inline-block;
-            padding: 10px 15px;
-            margin: 5px;
-            background-color: #007bff;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-
-        .buttons a:hover {
-            background-color: #0056b3;
-        }
-
-        .disabled-button a {
-            display: inline-block;
-            padding: 10px 15px;
-            margin: 5px;
-            background-color: #007bff;
-            color: white;
-            text-decoration: none;
-            display: inline-block;
-            border-radius: 5px;
-
-            cursor: not-allowed;
-            opacity: 0.5;
-            pointer-events: none;
-        }
-        
-        .overlay-image-container {
-            width: 250px;
-            height: 200px;
-            overflow: hidden;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border: 2px solid #ccc;
-            background-color: #f8f8f8;
-        }
-
-        .overlay-image {
-            max-width: 100%;
-            max-height: 100%;
-            object-fit: contain;
-        }
-
-        .tab-container {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 20px;
-        }
-
-        .tab {
-            padding: 12px 20px;
-            border: none;
-            cursor: pointer;
-            background: #ddd;
-            color: #333;
-            font-size: 16px;
-            transition: 0.3s;
-            margin: 0 5px;
-            border-radius: 5px;
-        }
-
-        .tab.active {
-            background: #007BFF;
-            color: white;
-        }
-
-        .content-container {
-            background: white;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            max-width: 500px;
-            margin: auto;
-            display: none;
-        }
-
-        .content-container.active {
-            display: block;
-        }
-
-        .filler {
-            flex-grow: 1;
-        }
-
-        @media (max-width: 768px) {
-        .container {
-            flex-direction: column;
-        }
-
-        .left, .right {
-            width: 100%;
-        }
-
-        .left {
-            padding: 5px;
-        }
-
-        .left iframe {
-            height: 250px;
-        }
-
-        .right {
-            padding: 15px;
-        }
-
-        .overlay-image-container {
-            width: 100%;
-            height: auto;
-        }
-
-        .tab {
-            font-size: 14px;
-            padding: 10px;
-        }
-
-        .content-container {
-            max-width: 90%;
-        }
-    }
-
-    @media (max-width: 480px) {
-        .tab {
-            font-size: 12px;
-            padding: 8px;
-        }
-
-        .buttons a {
-            padding: 8px 12px;
-            font-size: 14px;
-        }
-
-        .description p {
-            font-size: 13px;
-            line-height: 1.6;
-        }
-    }
-    </style>
+    <link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body>
 <div class="container">
     <div class="left">
-        <div class="description">
-            <div id="container1" class="content-container active">
-                <p>Ich biete individuelle Nachhilfe in Mathematik und Französisch für Schülerinnen und Schüler verschiedner Schulstufe - fokussiert, effizient und verständlich.</p>
-                <p>Für den Nachhilfeunterricht entwerfe ich eigene Lernmaterialien und / oder stelle vorhandene Lernmaterialien kostenlos zu Verfügung.</p>
-            </div>
-        </div>
+        <img src="../Multimedia/cover_5.png" alt="tutor-assistant" class="overlay-image">
     </div>
     <div class="right">
         <div class="description">
-            <h2>Nachhilfe für verschiedene Fächer</h2>
+            <h2>Mein Nachhilfeangebot</h2>
             <br><br><br>
             <div id="container1" class="content-container active">
                 <p>Mathematik, Französisch und vieles mehr unterrichte ich als selbstständiger Nachhilfelehrer. Sowohl vor Ort als auch online arbeite ich mit Schülerinnen und Schülern aller Stufen daran, Wissenslücken zu erkennen und sie gemeinsam zu schliessen.</p>  
-                <p>Ich biete ein breites Angebot an: von Einzel- und Gruppenunterricht über Prüfungsvorbereitungen (z.B. Maturaprüfungen) bis hin zu wöchentlichen Spezialkursen. Zusätzlich können optionale Zusatzmodule gebucht werden.</p>
+                <p>Ich biete ein breites Angebot an: Von Einzel- und Gruppenunterricht über Prüfungsvorbereitungen (z.B. Maturaprüfungen) bis hin zu wöchentlichen Spezialkursen. Zusätzlich können optionale Zusatzmodule gebucht werden.</p>
             </div>
         </div>
         <br><br>
@@ -226,13 +31,6 @@
 </div>
 </body>
 
-<script>
-    function switchContainer(containerId) {
-        document.querySelectorAll('.content-container').forEach(container => container.classList.remove('active'));
-        document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
-        document.getElementById(containerId).classList.add('active');
-        document.querySelector(`[onclick="switchContainer('${containerId}')"]`).classList.add('active');
-    }
-</script>
+<script src="../../script.js"></script>
 
 </html>
