@@ -79,3 +79,6 @@ function openNews(element) {
 function closeNews() {
     document.getElementById("news-overlay").style.display = "none";
 }
+
+// login
+

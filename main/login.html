@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="eLibrary">
+
+    <title>eLibrary v.1.2</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="icon" href="../Lager/Favicon/favicon.jpg" type="image/jpg">
+    <link rel="apple-touch-icon" href="../Lager/Favicon/apple-icon.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<header>
+    <h3>eLibrary</h3>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Startseite</a></li>
+        <li><a href="explorer.html">Explorer</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="https://sites.google.com/view/r-ravinthrarasa/landing-page" title="Kontakt"><i class="fas fa-address-card"></i></a></li>
+        <li><a href="suche.html" title="Suchen"><i class="fas fa-search"></i></a></li>
+        <li><a href="login.html" title="Login"><i class="fa-solid fa-right-to-bracket"></i></a></li>
+      </ul>
+    </nav>
+</header>
+
+<body>
+    <div class="center-wrap">
+        <div class="spinner" id="spinner"></div>
+        <p id="status">Verbindung zum Server…</p>
+    </div>
+</body>
+
+<footer>
+    <h4>&copy; 2025 - 2026 <a href="https://sites.google.com/view/r-ravinthrarasa/projekte/education-utilities" target="_blank"
+        class="styled-link">Education Utilities</a>, alle
+        <a href="https://sites.google.com/view/r-ravinthrarasa/impressum" target="_blank" class="styled-link">Rechte</a>
+        vorbehalten.
+    </h4>
+</footer>
+
+<script>
+    function connect() {
+        let status = document.getElementById("status");
+        let spinner = document.getElementById("spinner");
+
+        status.innerText = "Verbindung zum Server…";
+
+        setTimeout(() => {
+            status.innerText = "Authentifiziere…";
+
+            setTimeout(() => {
+
+                window.location.href = "../staff/index.html";
+
+                setTimeout(() => {
+                    status.innerText = "Verbindung fehlgeschlagen";
+                    spinner.style.display = "none";
+                }, 10000);
+
+            }, 1500);
+
+        }, 1200);
+    }
+
+    connect();
+</script>

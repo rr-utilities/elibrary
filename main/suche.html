@@ -8,7 +8,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="eLibrary">
 
-    <title>eLibrary v.1.1</title>
+    <title>eLibrary v.1.2</title>
     <link rel="stylesheet" href="styles.css">
 
     <link rel="icon" href="../Lager/Favicon/favicon.jpg" type="image/jpg">
@@ -23,8 +23,9 @@
         <li><a href="../index.html">Startseite</a></li>
         <li><a href="explorer.html">Explorer</a></li>
         <li><a href="news.html">News</a></li>
-        <li><a href="https://sites.google.com/view/r-ravinthrarasa/landing-page" title="Suchen"><i class="fas fa-address-card"></i></a></li>
+        <li><a href="https://sites.google.com/view/r-ravinthrarasa/landing-page" title="Kontakt"><i class="fas fa-address-card"></i></a></li>
         <li><a href="suche.html" title="Suchen"><i class="fas fa-search"></i></a></li>
+        <li><a href="login.html" title="Login"><i class="fa-solid fa-right-to-bracket"></i></a></li>
       </ul>
     </nav>
 </header>
@@ -45,7 +46,7 @@
 </footer>
 
 <script> const werke = [
-    { titel: "Mein Nachhilfeangebot", ort: "Startseite > Werbung", beschreibung: "Ich biete individuelle Nachhilfe in Mathematik und Französisch für Schülerinnen und Schüler verschiedner Schulstufe - fokussiert, effizient und verständlich." },
+    { titel: "Fachschaft Nachhilfe", ort: "Startseite > Werbung", beschreibung: "Dieser Verein ist eine Gruppe von Nachhilfelehrerinnen und Nachhilfelehrer, die die gleiche Passion des Nachhilfegebens teilen." },
     { titel: "Forum digitalis", ort: "Startseite > Werbung", beschreibung: "Ein Forum zum Erlernen und Nachschlagen von Coding und Co. bezogenen Sachen (LaTeX / HTML)." },
 
     { titel: "Übersicht der Mathematiktheorie", ort: "Startseite > Wissenschaften fürs Gymnasium", beschreibung: "Übersicht der Mathematikthorie auf gymnasialem Niveau." },
@@ -55,12 +56,11 @@
     { titel: "Übersicht der Astronomietheorie", ort: "Startseite > Wissenschaften fürs Gymnasium", beschreibung: "Übersicht der Astronomiethorie auf gymnasialem Niveau." },
     { titel: "Grundlagen der Psychologie", ort: "Startseite > Wissenschaften fürs Gymnasium", beschreibung: "Grundlagen der Psychologie auf gymnasialem Niveau." },
 
-    { titel: "BKS Assistant", ort: "Startseite > Apps", beschreibung: "Portal zur Unterstützung des Schulalltags an der Bündner Kantonsschule Chur (BKS Chur)" },
-    { titel: "bks_chur", ort: "Startseite > Apps", beschreibung: "Ein Quizlet-Account mit den wichtigsten Vokabeln aus (fast) allen Sprachen, die an der Bündner Kantonsschule Chur unterrichtet werden." },
-    { titel: "kopfrechner", ort: "Startseite > Apps", beschreibung: "Eine simple und schnelle Art, um Kopfrechnen sogar im Alltag zu üben." },
-    { titel: "kopfentspanner", ort: "Startseite > Apps", beschreibung: "Ein simpler Timer, um den Kopf beim Lernen zu entlasen." },
-    { titel: "HexaLengua (Rosshan's Version)", ort: "Startseite > Apps", beschreibung: "Rerelease von HexaLengua in Rosshan's Version." },
+    { titel: "HexaLengua (Rosshan's Version)", ort: "Startseite > Apps", beschreibung: "Rerelease von HexaLengua in Rosshan's Version / Maturaarbeit / kreative Produktion (Spanisch)." },
+    { titel: "vibecoder", ort: "Startseite > Apps", beschreibung: "Hier befinden sich Projekte, die aus purem 'vibecoding' Tatendrang entstanden." },
     { titel: "Tutor Assistant", ort: "Startseite > Apps", beschreibung: "Portal zur Unterstützung in der Tätigkeit als Nachhilfelehrer*in." },
+    { titel: "bks_chur", ort: "Startseite > Apps", beschreibung: "Ein Quizlet-Account mit den wichtigsten Vokabeln aus (fast) allen Sprachen, die an der Bündner Kantonsschule Chur unterrichtet werden." },
+    { titel: "BKS Assistant", ort: "Startseite > Apps", beschreibung: "Portal zur Unterstützung des Schulalltags an der Bündner Kantonsschule Chur (BKS Chur)." },
 
     { titel: "Grundoperationen in N, Z, Q und R", ort: "Startseite > Exakte Wissenschaften", beschreibung: "Skript mit Theorie und Übungen zu den Grundoperationen in N, Z, Q und R." },
     { titel: "Logarithmen", ort: "Startseite > Exakte Wissenschaften", beschreibung: "Skript mit Theorie und Übungen zu Logarithmen." },
@@ -69,8 +69,11 @@
     { titel: "Infinitesimalrechnung", ort: "Startseite > Exakte Wissenschaften", beschreibung: "Skript mit Theorie und Übungen zu der Differential- und Integralrechnung." },
     { titel: "Vektorgeometrie - Grundlagen", ort: "Startseite > Exakte Wissenschaften", beschreibung: "Skript mit Theorie und Übungen zu der Vektorrechnung und der analytischen Geometrie." },
     { titel: "Stochastik - Einführung", ort: "Startseite > Exakte Wissenschaften", beschreibung: "Skript mit Theorie und Beispielen zu der Kombinatorik und der Warhscheinlichkeitsrechnung." },
-    { titel: "Parameteranalyse", ort: "Startseite > Exakte Wissenschaften", beschreibung: "Analyse von Parameterwirkung in Funktionsgleichung / Unabhängige Arbeit." },
     { titel: "Formelsammlung - Mathematik", ort: "Startseite > Exakte Wissenschaften", beschreibung: "Formelsammlung der Mathematik mit den wichtigsten Formeln für das gymnasiale Niveau." },
+    { titel: "Übergang in die Lineare Algebra", ort: "Startseite > Exakte Wissenschaften", beschreibung: "Übergangsskriptum in die Lineare Algebra vom gymnasialen Niveau heraus." },
+    { titel: "Der binomische Lehrsatz (Paper)", ort: "Startseite > Exakte Wissenschaften", beschreibung: "Paper zum binomischen Lehrsatz, der dessen Doppelgebrauch und Zussammenhang zwischen der Algebra und Stochastik untersucht." },
+    { titel: "Die Gerade (Paper)", ort: "Startseite > Exakte Wissenschaften", beschreibung: "Paper zum binomischen Lehrsatz, der dessen Doppelgebrauch und Zussammenhang zwischen der Algebra und Stochastik untersucht." },
+    { titel: "Parameteranalyse", ort: "Startseite > Exakte Wissenschaften", beschreibung: "Analyse von Parameterwirkung in Funktionsgleichung / unabhängige Arbeit / mathematische Untersuchung." },
 
     { titel: "Literaturjournal 2024", ort: "Startseite > Linguistik und Literatur", beschreibung: "Literaturanalyse / -archiv einiger Schullektüren aus 2024." },
     { titel: "Literaturjournal 2025", ort: "Startseite > Linguistik und Literatur", beschreibung: "Literaturanalyse / -archiv einiger Schullektüren aus 2025." },
@@ -80,23 +83,9 @@
     { titel: "Spanische Morphologie, Syntax und Literatur", ort: "Startseite > Linguistik und Literatur", beschreibung: "Von grundlegender Spanischgrammatik bis zu Literaturanalyse für die Maturaprüfung." },
     { titel: "Französische Morphologie, Syntax und Literatur", ort: "Startseite > Linguistik und Literatur", beschreibung: "Von grundlegender Französischgrammatik bis zu Literaturanalyse für die Maturaprüfung." },
     { titel: "Konzept der deutschen Literatur- und Textanalyse", ort: "Startseite > Linguistik und Literatur", beschreibung: "Literaturanalyse / -archiv und Textanalyse für die Maturprüfung." },
-    { titel: "Sprachunterricht. Wie pädagogisch wertvoll ist er?", ort: "Startseite > Linguistik und Literatur", beschreibung: "Pädagogische Untersuchung des Sprachunterrichts auf Deutsch, Französisch, Spanisch und Englisch." },
+    { titel: "Sprachunterricht. Wie pädagogisch wertvoll ist er?", ort: "Startseite > Linguistik und Literatur", beschreibung: "Pädagogische Untersuchung des Sprachunterrichts auf Deutsch, Französisch, Spanisch und Englisch / unabhängige Arbeit / pädagogische Untersuchung." },
 
-    { titel: "Algebra 7/8", ort: "Explorer > Lehrmittel", beschreibung: "Lehrmittel für den Übergang zwischen Primarstufe und Sekundar- / Gymnasialstufe (Variablen, Brüche, natürliche Zahlen, negative Zahlen etc.)." },
-    { titel: "Algebra 9/10", ort: "Explorer > Lehrmittel", beschreibung: "Lehrmittel für die grundlegende Algebra (Brüche, lineare Gleichungen, quadratische Gleichungen, Potenzen, Exponentialfunktionen, Logarithmus)." },
-    { titel: "Analysis", ort: "Explorer > Lehrmittel", beschreibung: "Lehrmittel für die grundlegende Analysis (Folgen und Reihen, Grenzwerte, Differentialrechnung, Integral etc.)." },
-    { titel: "Physik - anwenden und verstehen", ort: "Explorer > Lehrmittel", beschreibung: "Lehrmittel für die Physik von grundlegender Mechanik bis fortgeschrittener Magnetismus." },
-    { titel: "Formeln, Tabellen, Begriffe", ort: "Explorer > Lehrmittel", beschreibung: "Übersicht von Formeln, Tabellen und Begriffen in der Mathematik, Physik, Astronomie und Chemie." },
-    { titel: "Le Cours intensif", ort: "Explorer > Lehrmittel", beschreibung: "Französisch-Lehrmittel von A1 bis B2." },
-    { titel: "Espresso Ragazzi", ort: "Explorer > Lehrmittel", beschreibung: "Ein Italienischlehrmittel von Grundlagen bis zur Vorbereitung für die Maturaprüfung." },
-    { titel: "Puente Nuevo", ort: "Explorer > Lehrmittel", beschreibung: "Ein Spanischlehrmittel fürs Spanischlernen im Schnellkurs." },
-    { titel: "Ready for C1 Advanced", ort: "Explorer > Lehrmittel", beschreibung: "Ein Vorbereitungskurs für die CAE Prüfung auf dem C1 Level." },
-    { titel: "En lingia directa", ort: "Explorer > Lehrmittel", beschreibung: "Ein Lehrmittel fürs Romanisch Sursilvan mit der grundlegender Grammatik und Wörtern." },
-    { titel: "Medias in Res!", ort: "Explorer > Lehrmittel", beschreibung: "Lateinlehrmittel für eine grundlegende Einfürhung und auch für die Latinumsvorbereitung." },
-    { titel: "Geschichte fürs Gymnasium 1", ort: "Explorer > Lehrmittel", beschreibung: "Geschichte der Menschheit in chronologischer Folge präpariert fürs Gymnasium (ab Steinzeit)." },
-    { titel: "Geschichte fürs Gymnasium 2", ort: "Explorer > Lehrmittel", beschreibung: "Geschichte der Menschheit in chronologischer Folge präpariert fürs Gymnasium (ab Mittelalter)." },
-    { titel: "Geschichte fürs Gymnasium 3", ort: "Explorer > Lehrmittel", beschreibung: "Geschichte der Menschheit in chronologischer Folge präpariert fürs Gymnasium (ab Ersten Weltkrieg)." },
-    { titel: "Psychologie (Hobmair)", ort: "Explorer > Lehrmittel", beschreibung: "Einführung in die Psychologie und Präsentation von den wichtigsten Grundlagefächer dieser Wissenschaft." },
+    { titel: "Leitfaden Lerncoaching", ort: "Startseite > Fachschaft Nachhilfe (Vereinsbibliothek)", beschreibung: "Leitfaden für Nachhilfelehrerinnen und Nachhilfelehrer für das Lerncoaching." },
 
     { titel: "Quizlet", ort: "Explorer > Webseiten", beschreibung: "Lernen mit Karteikarten und Co." },
     { titel: "StudySmarter", ort: "Explorer > Webseiten", beschreibung: "Lernen mit Zusammenfassungen und Co." },
@@ -132,14 +121,38 @@
     { titel: "Paradise Garden", ort: "Explorer > Schullektüren (Deutsch)", beschreibung: "Paradise Garden von Elena Fischer" },
     { titel: "Der Prozess", ort: "Explorer > Schullektüren (Deutsch)", beschreibung: "Der Prozess von Franz Kafka" },
 
+    { titel: "Knock ou le Triomphe de la Médecine", ort: "Explorer > Schullektüren (Französisch)", beschreibung: "Knock ou le Triomphe de la Médecine von Jules Romains" },
+    { titel: "Les Fables", ort: "Explorer > Schullektüren (Französisch)", beschreibung: "Les Fables von Jean de La Fontaine" },
+    { titel: "Contes du jour et de la nuit", ort: "Explorer > Schullektüren (Französisch)", beschreibung: "Contes du jour et de la nuit von Guy de Maupassant" },
+    { titel: "Mateo Falcone", ort: "Explorer > Schullektüren (Französisch)", beschreibung: "Mateo Falcone von Prosper Mérimée" },
+    { titel: "L'Analphabète", ort: "Explorer > Schullektüren (Französisch)", beschreibung: "L'Analphabète von Agota Kristof" },
+
+    { titel: "Algebra 7/8", ort: "Explorer > Lehrmittel", beschreibung: "Lehrmittel für den Übergang zwischen Primarstufe und Sekundar- / Gymnasialstufe (Variablen, Brüche, natürliche Zahlen, negative Zahlen etc.)." },
+    { titel: "Algebra 9/10", ort: "Explorer > Lehrmittel", beschreibung: "Lehrmittel für die grundlegende Algebra (Brüche, lineare Gleichungen, quadratische Gleichungen, Potenzen, Exponentialfunktionen, Logarithmus)." },
+    { titel: "Analysis", ort: "Explorer > Lehrmittel", beschreibung: "Lehrmittel für die grundlegende Analysis (Folgen und Reihen, Grenzwerte, Differentialrechnung, Integral etc.)." },
+    { titel: "Physik - anwenden und verstehen", ort: "Explorer > Lehrmittel", beschreibung: "Lehrmittel für die Physik von grundlegender Mechanik bis fortgeschrittener Magnetismus." },
+    { titel: "Formeln, Tabellen, Begriffe", ort: "Explorer > Lehrmittel", beschreibung: "Übersicht von Formeln, Tabellen und Begriffen in der Mathematik, Physik, Astronomie und Chemie." },
+    { titel: "Le Cours intensif", ort: "Explorer > Lehrmittel", beschreibung: "Französisch-Lehrmittel von A1 bis B2." },
+    { titel: "Espresso Ragazzi", ort: "Explorer > Lehrmittel", beschreibung: "Ein Italienischlehrmittel von Grundlagen bis zur Vorbereitung für die Maturaprüfung." },
+    { titel: "Puente Nuevo", ort: "Explorer > Lehrmittel", beschreibung: "Ein Spanischlehrmittel fürs Spanischlernen im Schnellkurs." },
+    { titel: "Ready for C1 Advanced", ort: "Explorer > Lehrmittel", beschreibung: "Ein Vorbereitungskurs für die CAE Prüfung auf dem C1 Level." },
+    { titel: "En lingia directa", ort: "Explorer > Lehrmittel", beschreibung: "Ein Lehrmittel fürs Romanisch Sursilvan mit der grundlegender Grammatik und Wörtern." },
+    { titel: "Medias in Res!", ort: "Explorer > Lehrmittel", beschreibung: "Lateinlehrmittel für eine grundlegende Einfürhung und auch für die Latinumsvorbereitung." },
+    { titel: "Geschichte fürs Gymnasium 1", ort: "Explorer > Lehrmittel", beschreibung: "Geschichte der Menschheit in chronologischer Folge präpariert fürs Gymnasium (ab Steinzeit)." },
+    { titel: "Geschichte fürs Gymnasium 2", ort: "Explorer > Lehrmittel", beschreibung: "Geschichte der Menschheit in chronologischer Folge präpariert fürs Gymnasium (ab Mittelalter)." },
+    { titel: "Geschichte fürs Gymnasium 3", ort: "Explorer > Lehrmittel", beschreibung: "Geschichte der Menschheit in chronologischer Folge präpariert fürs Gymnasium (ab Ersten Weltkrieg)." },
+    { titel: "Psychologie (Hobmair)", ort: "Explorer > Lehrmittel", beschreibung: "Einführung in die Psychologie und Präsentation von den wichtigsten Grundlagefächer dieser Wissenschaft." },
+
+    { titel: "Vorbereitungsskript Deutsch", ort: "Explorer > Vorbereitungsskript (Maturaprüfungen 2026)", beschreibung: "Vorbereitungsskript für GF D." },
+    { titel: "Vorbereitungsskript Französisch", ort: "Explorer > Vorbereitungsskript (Maturaprüfungen 2026)", beschreibung: "Vorbereitungsskript für GF F." },
+    { titel: "Vorbereitungsskript Spanisch", ort: "Explorer > Vorbereitungsskript (Maturaprüfungen 2026)", beschreibung: "Vorbereitungsskript für SF SPA." },
+    { titel: "Vorbereitungsskript Mathemaitk", ort: "Explorer > Vorbereitungsskript (Maturaprüfungen 2026)", beschreibung: "Vorbereitungsskript für GF M." },
+    { titel: "Vorbereitungsskript Pädagogik & Psychologie", ort: "Explorer > Vorbereitungsskript (Maturaprüfungen 2026)", beschreibung: "Vorbereitungsskript für EF PP." },
+
     { titel: "Geschichte 5G", ort: "Explorer > Zusammenfassungen", beschreibung: "Geschichtszusammenfassung für die 5. Gymnasialklasse." },
     { titel: "Geographie 5G", ort: "Explorer > Zusammenfassungen", beschreibung: "Geographiezusammenfassung für die 5. Gymnasialklasse." },
     { titel: "Geschichte 6G", ort: "Explorer > Zusammenfassungen", beschreibung: "Geschichtszusammenfassung für die 6. Gymnasialklasse." },
     { titel: "Geographie 6G", ort: "Explorer > Zusammenfassungen", beschreibung: "Geographiezusammenfassung für die 6. Gymnasialklasse." },
-
-    { titel: "Moment of Realization", ort: "Explorer > Belletristik", beschreibung: "Beschreibung des Werkes einfügen!" },
-    { titel: "Moment of Realization 2", ort: "Explorer > Belletristik", beschreibung: "Beschreibung des Werkes einfügen! Nicht vergessen!!" },
-    { titel: "L'Histoire de Lui", ort: "Explorer > Belletristik", beschreibung: "Ce titre a des fautes grammaticales." },
 
     { titel: "MAKEITART", ort: "rr-utilities.github.io/MAKEITART", beschreibung: "" },
     ];

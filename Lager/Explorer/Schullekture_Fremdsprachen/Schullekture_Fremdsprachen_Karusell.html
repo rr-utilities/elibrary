@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karusell</title>
+    <link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body>
+    <button class="arrow left-arrow" onclick="scrollCarousel(-1)">&#10094;</button>
+    <button class="arrow right-arrow" onclick="scrollCarousel(1)">&#10095;</button>
+
+    <div class="carousel-container">
+        <div class="carousel-wrapper" id="carousel">
+
+            <div class="book-panel-wrapper">
+                <div class="book">
+                    <img src="cover_1.jpeg" alt="">
+                    <h5>Knock ou le Triomphe de la Médecine</h5>
+                    <button class="details-button" onclick="togglePanel(this)">Details</button>
+                </div>
+
+                <div class="side-panel">
+                    <button class="close-button" onclick="togglePanel(this)">×</button>
+                    <p><strong>Romains Jules</strong></p>
+                    <p>Knock ou le Triomphe de la Médecine von Jules Romains</p>
+                    <a href="https://www.google.com/search?q=Knock+ou+le+Triomphe+de+la+M%C3%A9decine+Jules+Romain+kaufen" target="_blank" class="open-button">Im Web suchen</a>
+                </div>
+            </div>
+
+            <div class="book-panel-wrapper">
+                <div class="book">
+                    <img src="cover_2.webp" alt="">
+                    <h5>Les Fables</h5>
+                    <button class="details-button" onclick="togglePanel(this)">Details</button>
+                </div>
+
+                <div class="side-panel">
+                    <button class="close-button" onclick="togglePanel(this)">×</button>
+                    <p><strong>Jean de La Fontaine</strong></p>
+                    <p>Les Fables von Jean de La Fontaine</p>
+                    <a href="https://www.google.com/search?q=Les+Fables+Jean+de+La+Fontaine+kaufen" target="_blank" class="open-button">Im Web suchen</a>
+                </div>
+            </div>
+
+            <div class="book-panel-wrapper">
+                <div class="book">
+                    <img src="cover_3.jpeg" alt="">
+                    <h5>Contes du jour et de la nuit</h5>
+                    <button class="details-button" onclick="togglePanel(this)">Details</button>
+                </div>
+
+                <div class="side-panel">
+                    <button class="close-button" onclick="togglePanel(this)">×</button>
+                    <p><strong>Guy de Maupassant</strong></p>
+                    <p>Contes du jour et de la nuit von Guy de Maupassant</p>
+                    <a href="https://www.google.com/search?q=Contes+du+jour+et+de+la+nuit+Guy+de+Maupassant+kaufen" target="_blank" class="open-button">Im Web suchen</a>
+                </div>
+            </div>
+
+           <div class="book-panel-wrapper">
+                <div class="book">
+                    <img src="cover_4.jpeg" alt="">
+                    <h5>Mateo Falcone</h5>
+                    <button class="details-button" onclick="togglePanel(this)">Details</button>
+                </div>
+
+                <div class="side-panel">
+                    <button class="close-button" onclick="togglePanel(this)">×</button>
+                    <p><strong>Prosper Mérimée</strong></p>
+                    <p>Mateo Falcone von Prosper Mérimée</p>
+                    <a href="https://www.google.com/search?q=Mateo+Falcone+Prosper+M%C3%A9rim%C3%A9e+kaufen" target="_blank" class="open-button">Im Web suchen</a>
+                </div>
+            </div>
+
+           <div class="book-panel-wrapper">
+                <div class="book">
+                    <img src="cover_5.jpeg" alt="">
+                    <h5>L'Analphabète</h5>
+                    <button class="details-button" onclick="togglePanel(this)">Details</button>
+                </div>
+
+                <div class="side-panel">
+                    <button class="close-button" onclick="togglePanel(this)">×</button>
+                    <p><strong>Agota Kristof</strong></p>
+                    <p>L'Analphabète von Agota Kristof</p>
+                    <a href="https://www.google.com/search?q=L%27Analphab%C3%A8te+Agota+Kristof+kaufen" target="_blank" class="open-button">Im Web suchen</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+<script src="../../script.js"></script>
+
+</html>

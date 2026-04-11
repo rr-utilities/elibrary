@@ -15,5 +15,4 @@ Ich bin der einzige, der dieses Projekt verwaltet. Bei Anmerkungen und Co.: E-Ma
 **eLibrary Agenda**
 1. Veröffentlichung (03.05.2025, v.1.0): Grundlegende Webseitenstruktur mit Startseite und den ersten Werken (Multimedia)
 2. Veröffentlichung (09.08.2025, v.1.1): Neue Funktionen (Suchfunktion & Explorer) und viele neue Werke (v.a. "Linguistik und Literatur")
-3. Veröffentlichung (31.10.2025): Offizielle Veröffentlichung der Maturaarbeit
-4. Veröffentlichung (11.04.2026, v.1.2): Publikationen für die Maturaprüfungen (WfG-Reihe, Exakte Wissenschaften, Linguistik und Literatur, Zusammenfassungen etc.)
+3. Veröffentlichung (11.04.2026, v.1.2): Publikationen für die Maturaprüfungen (WfG-Reihe, Exakte Wissenschaften, Linguistik und Literatur, Zusammenfassungen etc.)
