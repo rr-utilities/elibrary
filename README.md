@@ -1,18 +1,41 @@
+<div align="center">
+
 # eLibrary
-Digitale Bibliothek für Werke aus der Literatur / Multimedia etc.
 
-**Was ist die Aufgabe des Projekts?**
-Das Projekt sollte eine Unterstützung für den Schulalltag und Schule sein.
+### Exakte Wissenschaften, Sprach- und Literaturwissenschaften, Naturwissenschaften
 
-**Warum ist das Projekt sinnvoll?**
-Schule ist schwierig. Um die Schulzeit so reibungslos wie möglich zu gestalten, greift man meistens auf Hilfsmitteln zurück. In diesem Fall ist es die eLibrary, welches vieles beinhaltet: einen digitalen Schulassistant konzipiert für die Bündner Kantonsschule Chur (BKS Assistant), eine simple Art zum Kopfrechnen üben (Kopfrechner), ganze viele Nachschlagewerke in der Linguistik, viele Skripte für die exakten Wissenschaften und auch riesige Zusammenfassungen für maturaprüfungsrelevante Fächer (WfG-Reihe und Co.).
+<br>
 
-**Wer verwaltet das Projekt und trägt dazu bei?**
-Ich bin der einzige, der dieses Projekt verwaltet. Bei Anmerkungen und Co.: E-Mail-Adresse, siehe Profil
+![Version](https://img.shields.io/badge/Version-1.3-1f1f1f?style=for-the-badge)
+![Urheber](https://img.shields.io/badge/Urheber-RR%20Utilities-1f1f1f?style=for-the-badge)
+
+</div>
 
 ---
 
-**eLibrary Agenda**
+## Beschreibung
+
+Digitale Bibliothek für Werke aus den Naturwissenschaften (gymnasiales Niveau), Exakten Wissenschaften, Sprach- und Literaturwissenschaften. Zudem gibt es einen Explorer, in dem man neue Schulliteratur oder auch hilfreich Webseiten und Apps für den Schulalltag findet.
+
+<br>
+
+> Fokus auf Wissenschaften
+
+---
+
+## Inhalte
+
+|  | Beschreibung |
+|---|---|
+| **Startseite** | Publikationen in den verschiedensten Wissenschaften |
+| **Vereinsbibliothek** | Bibliothek des Vereins "Fachschaft Nachhilfe" |
+| **Explorer** | Sammlung von externen Plattformen und Lektüren etc. |
+
+---
+
+## Updates
+
 1. Veröffentlichung (03.05.2025, v.1.0): Grundlegende Webseitenstruktur mit Startseite und den ersten Werken (Multimedia)
 2. Veröffentlichung (09.08.2025, v.1.1): Neue Funktionen (Suchfunktion & Explorer) und viele neue Werke (v.a. "Linguistik und Literatur")
 3. Veröffentlichung (11.04.2026, v.1.2): Publikationen für die Maturaprüfungen (WfG-Reihe, Exakte Wissenschaften, Linguistik und Literatur, Zusammenfassungen etc.)
+4. Veröffentlichung (05.06.2026, v.1.3): Vereinsbibliothek für die Fachschaft Nachhilfe

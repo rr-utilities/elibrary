@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karusell</title>
+    <link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body>
+    <button class="arrow left-arrow" onclick="scrollCarousel(-1)">&#10094;</button>
+    <button class="arrow right-arrow" onclick="scrollCarousel(1)">&#10095;</button>
+
+    <div class="carousel-container">
+        <div class="carousel-wrapper" id="carousel">
+            <div class="book-panel-wrapper">
+                <div class="book">
+                    <img src="cover_5.jpg" alt="HexaLengua">
+                    <h5>HexaLengua (Rosshan's Version)</h5>
+                    <button class="details-button" onclick="togglePanel(this)">Details</button>
+                </div>
+
+                <div class="side-panel">
+                    <button class="close-button" onclick="togglePanel(this)">×</button>
+                    <p><strong>HexaLengua (Rosshan's Version)</strong></p>
+                    <p>Rerelease von HexaLengua in Rosshan's Version / Maturaarbeit / kreative Produktion (Spanisch). <br><br> <i>Angepinnt.</i></p>
+                    <p>VÖ: 31.10.2025 / 31.01.2026</p>
+                    <a href="https://rr-utilities.github.io/edtech/hexalengua-rv/index.html" target="_blank" class="open-button">Öffnen</a>
+                </div>
+            </div>
+
+            <div class="book">
+                <br><br>
+                <h5>EdTech Joint Venture</h5>
+                <p>Ein Joint Venture von Bildung und Technologie.</p>
+                <p>VÖ: 04.05.2026</p>
+                <a href="https://rr-utilities.github.io/forumdigitalis/assets/edtech.html" target="_blank" class="open-button">Mehr dazu</a>
+            </div>
+
+            <div class="book-panel-wrapper">
+                <div class="book">
+                    <img src="cover_6.jpg" alt="onion">
+                    <h5>Onion Studio v.1.0</h5>
+                    <button class="details-button" onclick="togglePanel(this)">Details</button>
+                </div>
+
+                <div class="side-panel">
+                    <button class="close-button" onclick="togglePanel(this)">×</button>
+                    <p><strong>Onion Studio v.1.0</strong></p>
+                    <p>Animationssoftware, um schnell und unkompliziert Stop-Motion-Filme etc. selbst zu produzieren.</p>
+                    <p>VÖ: 05.06.2026</p>
+                    <a href="https://rr-utilities.github.io/edtech/onion-studio/index.html" target="_blank" class="open-button">Öffnen</a>
+                </div>
+            </div>
+
+            <div class="book-panel-wrapper">
+                <div class="book">
+                    <img src="cover_3.png" alt="Tutor Assistant">
+                    <h5>Tutor Assistant v.1.2</h5>
+                    <button class="details-button" onclick="togglePanel(this)">Details</button>
+                </div>
+
+                <div class="side-panel">
+                    <button class="close-button" onclick="togglePanel(this)">×</button>
+                    <p><strong>Tutor Assistant v.1.2</strong></p>
+                    <p>Portal zur Unterstützung in der Tätigkeit als Nachhilfelehrer*in.</p>
+                    <p>VÖ: 04.10.2025</p>
+                    <a href="https://rr-utilities.github.io/edtech/tutor-studio/index.html" target="_blank" class="open-button">Öffnen</a>
+                </div>
+            </div>
+
+            <div class="book-panel-wrapper">
+                <div class="book">
+                    <img src="cover_4.jpg" alt="vibe">
+                    <h5>vibecoder v.1.0</h5>
+                    <button class="details-button" onclick="togglePanel(this)">Details</button>
+                </div>
+
+                <div class="side-panel">
+                    <button class="close-button" onclick="togglePanel(this)">×</button>
+                    <p><strong>vibecoder v.1.0</strong></p>
+                    <p>Hier befinden sich Projekte, die aus purem "vibecoding" Tatendrang entstanden.</p>
+                    <p>VÖ: 11.04.2026</p>
+                    <a href="https://rr-utilities.github.io/edtech/vibecoder/index.html" target="_blank" class="open-button">Öffnen</a>
+                </div>
+            </div>
+            
+            <div class="book-panel-wrapper">
+                <div class="book" id="book1">
+                    <img src="cover_1.jpg" alt="BKS A">
+                    <h5>BKS Assistant v.3.2</h5>
+                    <button class="details-button" onclick="togglePanel(this)">Details</button>
+                </div>
+                
+                <div class="side-panel">
+                    <button class="close-button" onclick="togglePanel(this)">×</button>
+                    <p><strong>BKS Assistant v.3.2</strong></p>
+                    <p>Portal zur Unterstützung des Schulalltags an der Bündner Kantonsschule Chur (BKS Chur).</p>
+                    <p>VÖ: 16.01.2025 / 17.01.2025</p>
+                    <a href="https://rr-utilities.github.io/edtech/bks-assistant/index.html" target="_blank" class="open-button">Öffnen</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="../../script.js"></script>
+
+</html>

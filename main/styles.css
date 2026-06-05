@@ -1,12 +1,12 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #16653408;
     margin: 0px;
     padding: 0;
 }
 
 header {
-    background-color: #598659;
+    background-color: #166534;
     color: #fff;
     padding: 10px 20px;
     display: flex;
@@ -18,7 +18,7 @@ header {
 }
 
 footer {
-    background-color: #A3AFA3;
+    background-color: #16653481;
     color: white;
     text-align: center;
     padding: 10px 0;
@@ -28,7 +28,7 @@ footer {
 
 h1 {
     font-size: 1.2em;
-    color: #598659;
+    color: #166534;
     text-align: center;
     margin-top: 20px;
     font-size: 1.75em;
@@ -105,7 +105,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    text-decoration: none;
+    font-weight: normal;
 }
 
 /* index ------------------------------------------------------------------------ */
@@ -226,7 +226,7 @@ main {
 .details-button {
     background: none;
     border: none;
-    color: #007bff;
+    color: #16653481;
     font-weight: bold;
     text-decoration: none;
     cursor: pointer;
@@ -236,7 +236,7 @@ main {
 
 .details-button:hover {
     text-decoration: none;
-    color: darkblue;
+    color: #1665343f;
 }
 
 .overlay-toggle {
@@ -397,14 +397,14 @@ main {
     display: inline-block;
     margin-top: 15px;
     padding: 10px 20px;
-    background: #007bff;
+    background: #16653481;
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
 }
 
 .news-button:hover {
-    background: #0056b3;
+    background: #1665343f;
 }
 
 /* suche ------------------------------------------------------------------------ */
